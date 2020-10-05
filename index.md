@@ -1,10 +1,24 @@
-## Welcome to GitHub Pages
+## 12-704 Final Project
+### Hi-Tech Basil
 
 You can use the [editor on GitHub](https://github.com/lgraff/lgraff-12704_Final_Project/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+## Introduction
+## Motivation
+## Goals
+
+## Progress Report: 10-5-20
+
+# Current Progress
+
+# Problems Encountered
+
+# Future Plan
+
+
+## Github pages syntax (for reference)
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
