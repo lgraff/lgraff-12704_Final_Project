@@ -8,6 +8,7 @@
 ## Progress Report: 10-5-20
 
 ### Current Progress
+-ASDFASDFADFASDFADFASDF
 - Set up the circuit for all sensors and confirmed that they are taking measurements when exposed to physical stimuli. This includes the temperature/humidity sensor, light sensor, and soil moisture sensor. The soil moisture sensor was something we purchased externally. We also tested that this circuit works specifically in the environment of the basil plant subject we're using.
 - Wrote basic Python code to record the measurements of each sensor.
 - Connected a camera to the circuit and wrote code to take repeated photos after a time interval
