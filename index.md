@@ -7,6 +7,7 @@ In this project, we describe how to set up a sensing and data broadcasting syste
 Growing plants indoors requires attention to a variety of environmental factors, including temperature, humidity, light, and soil moisture levels. Regulation of these parameters can be difficult, especially when there is sparse data concerning ideal growing conditions for individual plants. Specifically for the basil herb, a quick online search will reveal several different choices that an individual may make when tuning the ambient environmental factors. Notably, however, most sources are primarily anecdotal; homegrowers have yet to document the environmental conditions and associated growth patterns of their plants over time. To address these needs, we propose Hi-Tech Basil: a tweeting indoor basil plant with an associated database, and IoT capabilities. Analyzing the hourly records of this database, in addition to visualizing photos of the plant included in live daily tweets, may provide home growers with insight that optimizes the growth of their indoor plants.
 ## Project Sketch
 Our setup is described in Figure 1.
+
 INSERT FIGURE 1 WITH TITLE AND SOURCE
 ## Main Goal
 To setup a sensing and data broadcasting system for homegrown plants.
@@ -45,21 +46,56 @@ Importance of Soil Water:
 
 …”
 *	Ambient humidity: roughly defined as the amount of water in the air, relative to the maximum amount of water the air can hold at a given temperature. The strict definition is taken from Reference 2:
+
 “…
+
 The relative humidity (RH) is the ratio of the actual water vapour pressure to the saturation water vapour pressure at the prevailing temperature. For example – if a cubic metre can hold 100ml of water at 20 degrees centigrade (273 K) and it does contain 100ml then it is said to be 100% RH. If the same cubic metre of air at the same temperature only contains 50mls of water then it is described as 50% RH.
+
 …”
+
 The importance of this factor from plant growth is explained in the next passage, taken from Reference 3:
+
 “…
+
 If your grow room humidity is low (dry), it causes the plants to transpire much more rapidly than in a higher humidity environment. When this happens, the leaves become flaccid and begin to wilt, and over a longer period of time the plant will close its stomata, and reduce the flow of water out of the plant. This is very effective at stopping water loss, but unfortunately, it also reduces the intake of CO2. Without an adequate supply of CO2, the cells will begin to die, and the plant will look tired and ill.
+
 …”
 *	Ambient temperature: this is just the temperature of the room in which the plant is. This factor affects most plant processes. The next passage is taken from Reference 4:
+
 “…
+
 Temperature influences most plant processes, including photosynthesis, transpiration, respiration, germination, and flowering. As temperature increases (up to a point), photosynthesis, transpiration, and respiration increase.
+
 …”
 *	Ambient light intensity: measuring light intensity near the plant will give us the amount of sunlight that the plant receives. Sunlight is very important for plants, as it enables photosynthesis. Different plants require different amounts of sunlight, for optimal growth. 
 *	Intensity of green color: this is a proxy for the growth of the plant. By capturing how much green there is in a picture of the plant, we can capture its vitality, and use this as an indicator of the general state of the plant. Of course, this is just a proxy measure, and will be accompanied by actual pictures of the plant. 
+## Sensors Review
+* Photosensitive Light Sensor Module
 
+INSERT FIGURE 2 WITH TITLE AND SOURCE
 
+Working principle
+This sensor works based on the concept of photoconductivity. The red tip with the wiggly wire is a photoresistor. We can see a sketch of its components in Figure 3.
+
+INSERT FIGURE 3 WITH TITLE AND SOURCE
+
+A photoresistor is made of a material that, when exposed to light, experiences a decrease in its resistivity. This translates to a change in the voltage output of the signal (Figure 4).
+
+INSERT FIGURE 4 WITH TITLE AND SOURCE
+
+Specifications
+
+From Reference 5, we can gather the following specifications:
+* working voltage: 3.3~5V
+* output: digital switching (LOW or HIGH voltage on D pin) 
+* analog signal (voltage output on A pin)
+* output current >= 15mA, can directly light LED.
+
+Wiring schematic
+
+We are using the analog pin of the module, so we need to connect the module’s signal pin to one of the channels of the ADC. The wiring setup is expressed in Table 1
+
+INSERT TABLE 1 WITH TITLE AND SOURCE
 
 ## Progress Report: 10-5-20
 
