@@ -120,7 +120,12 @@ It is worth noting that this light sensor is not calibrated, and that every sens
 
 **DHT11 Temperature and Humidity Sensor Module**
 
-**INSERT FIGURE 5 WITH TITLE AND SOURCE**
+<p align="center">
+  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%205.jpg">
+</p>
+<p align="center">
+  <b>Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
+</p>
 
 *Working principle*
 
@@ -131,6 +136,12 @@ To measure temperature, it uses a thermistor, which is a resistor that changes i
 We can see the inner components of the sensor in Figure 6.
 
 **INSERT FIGURE 6 WITH TITLE AND SOURCE**
+<p align="center">
+  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%205.jpg">
+</p>
+<p align="center">
+  <b>Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
+</p>
 
 As we can see, the module has its own ADC, and it also saves the transfer function. Because of this, its output is already the temperature and humidity values. 
 
@@ -139,12 +150,24 @@ As we can see, the module has its own ADC, and it also saves the transfer functi
 The specifications of this output can be seen in Figure 7 (DHT11 column).
 
 **INSERT FIGURE 7 WITH TITLE AND SOURCE**
-
+<p align="center">
+  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%205.jpg">
+</p>
+<p align="center">
+  <b>Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
+</p>
+  
 *Wiring schematic*
 
 The wiring setup is expressed in Table 2
 
 **INSERT TABLE 2 WITH TITLE AND SOURCE**
+<p align="center">
+  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%205.jpg">
+</p>
+<p align="center">
+  <b>Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
+</p>
 
 *Applicability*
 
@@ -153,6 +176,13 @@ Since we expect the temperature and humidity to vary slowly, there is no need to
 **Soil Moisture Sensor Module**
 
 **INSERT FIGURE 8 WITH TITLE AND SOURCE**
+
+<p align="center">
+  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%205.jpg">
+</p>
+<p align="center">
+  <b>Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
+</p>
 
 *Working principle*
 
@@ -178,6 +208,13 @@ The wiring setup is expressed in Table 3.
 
 **INSERT TABLE 3 WITH TITLE AND SOURCE**
 
+<p align="center">
+  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%205.jpg">
+</p>
+<p align="center">
+  <b>Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
+</p>
+
 *Applicability*
 
 Again, since the soil moisture is not expected to vary drastically, the sampling rate of this device is more than enough. Also, with proper calibration, the results should be good enough for the data to be usable for later analysis. The sensor if more than enough in terms of sampling speed capacity, since we are going to be taking samples every minute, or every hour.
@@ -186,15 +223,36 @@ Again, since the soil moisture is not expected to vary drastically, the sampling
 
 **INSERT FIGURE 9 WITH TITLE AND SOURCE**
 
+<p align="center">
+  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%205.jpg">
+</p>
+<p align="center">
+  <b>Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
+</p>
+
 *Camera specifications*
 
 **INSERT CAMERA SPECIFICATIONS IMAGE OR TABLE**
+
+<p align="center">
+  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%205.jpg">
+</p>
+<p align="center">
+  <b>Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
+</p>
 
 *Wiring schematic*
 
 Connecting the camera is very simple, as can be seen in the next animation.
 
 **INSERT FIGURE 10 WITH TITLE AND SOURCE**
+
+<p align="center">
+  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%205.jpg">
+</p>
+<p align="center">
+  <b>Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
+</p>
 
 ## Signal conditioning and processing
 Here, we will talk about how often we took samples for each sensor, and also how we decided to process and share the data. It is important to note that all the sensors we used have some kind of signal conditioning, and we will provide resources that show the structure of their circuit boards.
@@ -217,13 +275,34 @@ We decided to store the data locally, by writing it to a .csv file. This will ma
 
 **Image with code.**
 
+<p align="center">
+  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%205.jpg">
+</p>
+<p align="center">
+  <b>Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
+</p>
+
 To share the data, we decided to tweet a daily summary of the data. To share this summary, we used the code in Figure 12. Instructions on how tweet using a Raspberry Pi can be found at Reference 6.
 
 **Image with code.**
 
+<p align="center">
+  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%205.jpg">
+</p>
+<p align="center">
+  <b>Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
+</p>
+
 We also used the OpenChirp IoT platform to share our data in real time, and made use of its graphing capabilities. Instructions on how to use this platform with Raspberry Pi can be found at Reference 7. The code we used to do this is shown in Figure 13.
 
 **Image with code.**
+
+<p align="center">
+  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%205.jpg">
+</p>
+<p align="center">
+  <b>Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
+</p>
 
 **Data processing**
 
@@ -241,14 +320,35 @@ The code we used for data processing is shown in Figure 14.
 
 **Image with code.**
 
+<p align="center">
+  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%205.jpg">
+</p>
+<p align="center">
+  <b>Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
+</p>
+
 ## Final Setup
 **Final Code:** the code we used, with comments, can be seen in Figure 15.
 
 **Image with code.**
 
+<p align="center">
+  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%205.jpg">
+</p>
+<p align="center">
+  <b>Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
+</p>
+
 **Physical Setup:** the setup sketch in Figure 1 was materialized as can be seen in Figure 16.
 
 **Photo of our setup**
+
+<p align="center">
+  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%205.jpg">
+</p>
+<p align="center">
+  <b>Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
+</p>
 
 ## Experiments and Results
 After running our code to collect data for XX days, we got the following results:
@@ -257,15 +357,34 @@ After running our code to collect data for XX days, we got the following results
 
 **Screencaps of .csv data**
 
+<p align="center">
+  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%205.jpg">
+</p>
+<p align="center">
+  <b>Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
+</p>
+
 **Twitter:** our program successfully tweeted our results as intended. A tweet can be seen in Figure 18.
 
 **Screencaps of Twitter**
+
+<p align="center">
+  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%205.jpg">
+</p>
+<p align="center">
+  <b>Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
+</p>
 
 **Open Chirp:** our program successfully connected live to the OpenChirp IoT platform. The resulting graphs can be seen in Figure 19.
 
 **Screencaps of OpenChirp**
 
-
+<p align="center">
+  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%205.jpg">
+</p>
+<p align="center">
+  <b>Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
+</p>
 
 *DISCUSS OPEN CHIRP RESLTS*
 
