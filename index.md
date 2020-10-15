@@ -1,6 +1,7 @@
 # 12-740 Final Project
 # Hi-Tech Basil
 
+
 # Introduction
 In this project, we describe how to set up a sensing and data broadcasting system for any homegrown plant. The data is captured by the Raspberry Pi and sensors, and made available through twitter, an IoT platform, and a .csv file, for people to use. If enough people do the same, we would then be able to have a very useful database to find the optimal ranges for all the factors that promote growth of plants.
 ## Motivation
@@ -229,6 +230,84 @@ Here, we explain how we processed the signals sampled by the sensors:
 The code we used for data processing is shown in Figure 14.
 
 **Image with code.**
+
+## Final Setup
+**Final Code:** the code we used, with comments, can be seen in Figure 15.
+
+**Image with code.**
+
+**Physical Setup:** the setup sketch in Figure 1 was materialized as can be seen in Figure 16.
+
+**Photo of our setup**
+
+## Experiments and Results
+After running our code to collect data for XX days, we got the following results:
+
+**CSV Output file:** the .csv file contained all the data points, as expected, and the structure lookes like Figure 17.
+
+**Screencaps of .csv data**
+
+**Twitter:** our program successfully tweeted our results as intended. A tweet can be seen in Figure 18.
+
+**Screencaps of Twitter**
+
+**Open Chirp:** our program successfully connected live to the OpenChirp IoT platform. The resulting graphs can be seen in Figure 19.
+
+**Screencaps of OpenChirp**
+
+
+
+*DISCUSS OPEN CHIRP RESLTS*
+
+
+
+
+## Discussion
+
+**What went good?**
+
+The set of sensors provided and purchased worked really well and were really easy to install. They were also inexpensive enough that anyone could have this same setup. Also, user friendly IoT platforms and libraries like Twython allow for easy sharing and remote monitoring, which makes the idea of building massive databases of these experiments feasible. Overall, these results are compatible with our initial goals.
+
+**What can be improved?**
+
+There are some aspects that need improvement. For example, the green vitality index is only of use as a relative measure of the state of the plant. It will only become useful if we have many data points (i.e. basil experiments like this) to compare with, and they will need to have similar camera setups. Also, measuring light intensity is not really useful in itself, but it needs to be converted to the number of hours of sunlight exposure, and maybe the quality of the sunlight received in that period.
+Another important limitation of this experiment is the fact that the soil we used has not been characterized. This falls out of the scope of the project, but the soil organic content, soil texture and nutrient content are major factors that will affect plant growth. Ideally, instructions on how to characterize the soil should be added by some specialist, and this way add new dimensions to our datapoints.
+
+**Ideas for further projects**
+
+Some features that would be interesting to add would be actuators like a water pump that keeps the soil moisture level at a certain value range, and an air humidifier to control the ambient moisture. Also, setting up alerts for the home owner when levels get critical (e.g. when the green vitality index falls below a threshold, or soil moisture is too low) would be a good idea.
+Finally, with a little more time, one could add an automatic size detection algorithm to the image processing part, to monitor plant growth in real time.
+
+## References
+
+## Annex: Calibration Procedures
+***Soil Moisture Calibration Method 1***
+
+1-	Make several measurements when the sensor is dry (in the air, not inserted in the soil). Average the values of voltage. This value will correspond to 0% RH.
+
+2-	Dip the sensor in a glass of water, to the depth that you will insert it in the soil. Make several measurements, and average the values of voltage. This value will correspond 1to 100% RH.
+
+3-	The transfer function will be an interpolation of the line that passes through these points
+
+***Soil Moisture Calibration Method 2 (Mass to Mass ratio)***
+
+1-	Take a sample of 100 gr of the soil you are using. Make sure the sample is roughly representative of the whole mass in the pot.
+
+2-	Dry the sample in the sun for a day or until completely dry. Place the sample in a recipient (e.g. a cup), and compact it to mimic the compaction level of the pot.
+
+3-	Insert the sensor in the soil up to the depth you will use in the actual experiment, and take several measurements of voltage in dry soil. Average them, and store it as the value corresponding to 0% Mass/Mass.
+
+4-	With plunger, add 5 ml of water to the soil, and mix it well. Recompact to mimic the compaction level of the pot. This should be done quickly, as moisture can escape to the air. Once mixed and recompacted in the recipient, reinsert the sensor and take several measurements of the voltage. Average them, and store this as the value corresponding to 5% Mass/Mass.
+
+5-	Repeat step 4 to get the voltage values for 10, 15, 20,…% Mass/Mass, until saturation. Saturation occurs when the soil is no longer able to absorb water.
+
+6-	Rescale the Mass/Mass percentages to RH percentages by dividing them by the Mass/Mass percentage that achieved saturation.
+
+7-	The transfer function can be either a polynomial fit to the points, or a direct linear interpolation between the points.
+
+***Light Sensor Calibration Procedure***
+
+**INSERT PROCEDURE**
 
 
 ## Progress Report: 10-5-20
