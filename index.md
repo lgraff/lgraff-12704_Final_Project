@@ -14,6 +14,7 @@ Our setup is described in Figure 1.
 </p>
 <p align="center">
   <b>Figure 1. Sensing and Data Broadcasting System sketch. Source: Figure Reference 8-10
+  <>
 </p>
 
 ## Main Goal
@@ -87,7 +88,12 @@ This sensor works based on the concept of photoconductivity. The red tip with th
 
 A photoresistor is made of a material that, when exposed to light, experiences a decrease in its resistivity. This translates to a change in the voltage output of the signal (Figure 4).
 
-**INSERT FIGURE 4 WITH TITLE AND SOURCE**
+<p align="center">
+  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%204.png">
+</p>
+<p align="center">
+  <b>Figure 4. Example of Voltage Output vs. Photoresistor’s Resistance. Source: Figure Reference 2
+</p>
 
 *Specifications*
 
@@ -101,7 +107,12 @@ From Reference 5, we can gather the following specifications:
 
 We are using the analog pin of the module, so we need to connect the module’s signal pin to one of the channels of the ADC. The wiring setup is expressed in Table 1
 
-**INSERT TABLE 1 WITH TITLE AND SOURCE**
+<p align="center">
+  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Table%201.png">
+</p>
+<p align="center">
+  <b>Table 1. Wiring Setup for Light Sensor Module. Source: Self
+</p>
 
 *Applicability*
 
