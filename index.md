@@ -427,7 +427,7 @@ Finally, with a little more time, one could add an automatic size detection algo
 
 [Reference 7]( https://www.scienceprojects.org/how-does-the-temperature-affect-the-plant-growth/#:~:text=Effect%20of%20temperature%20on%20plants&text=Temperature%20influences%20most%20plant%20processes,%2C%20transpiration%2C%20and%20respiration%20increase )
 
-[Reference 8]( https://www.freva.com/wp-content/uploads/2019/06/light_sensor-416x713.jpg)
+[Reference 8](https://www.amazon.es/M%C3%B3dulo-Fotosensible-detecci%C3%B3n-Fotorresistencia-Arduino/dp/B00VUQ6CU0)
 
 [Reference 9]( https://kookye.com/2018/11/16/arduino-lesson-sound-detection-sensor-2/)
 
