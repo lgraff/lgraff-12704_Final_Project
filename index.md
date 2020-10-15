@@ -21,7 +21,8 @@ To setup a sensing and data broadcasting system for homegrown plants.
 # Methodology
 ## Phenomena of Interest
 Here, we will establish what exacly are the physical phenomena we are measuring, and why they are of interest. Since all the phenomena here vary very slowly in time, they can all be considered static in nature.
-*	Soil moisture: this is basically the amount of water available in the soil. It can be measured as a ratio of volume of water per unit volume of soil, or as a ratio of water mass per unit mass of soil. We opt for the second measure because it is easier to measure, and so the calibration of the soil moisture sensor is easy to do at home. The importance of this variable for plant growth is widely known. Here, I quote a passage from Reference 1:
+
+**Soil moisture:** this is basically the amount of water available in the soil. It can be measured as a ratio of volume of water per unit volume of soil, or as a ratio of water mass per unit mass of soil. We opt for the second measure because it is easier to measure, and so the calibration of the soil moisture sensor is easy to do at home. The importance of this variable for plant growth is widely known. Here, I quote a passage from Reference 1:
 
 *“…*
 
@@ -46,7 +47,8 @@ Here, we will establish what exacly are the physical phenomena we are measuring,
 *-Water is essential for photosynthesis*
 
 *…”*
-*	Ambient humidity: roughly defined as the amount of water in the air, relative to the maximum amount of water the air can hold at a given temperature. The strict definition is taken from Reference 2:
+
+**Ambient humidity:** roughly defined as the amount of water in the air, relative to the maximum amount of water the air can hold at a given temperature. The strict definition is taken from Reference 2:
 
 *“…*
 
@@ -61,15 +63,18 @@ The importance of this factor from plant growth is explained in the next passage
 *If your grow room humidity is low (dry), it causes the plants to transpire much more rapidly than in a higher humidity environment. When this happens, the leaves become flaccid and begin to wilt, and over a longer period of time the plant will close its stomata, and reduce the flow of water out of the plant. This is very effective at stopping water loss, but unfortunately, it also reduces the intake of CO2. Without an adequate supply of CO2, the cells will begin to die, and the plant will look tired and ill.*
 
 *…”*
-*	Ambient temperature: this is just the temperature of the room in which the plant is. This factor affects most plant processes. The next passage is taken from Reference 4:
+
+**Ambient temperature:** this is just the temperature of the room in which the plant is. This factor affects most plant processes. The next passage is taken from Reference 4:
 
 *“…*
 
 *Temperature influences most plant processes, including photosynthesis, transpiration, respiration, germination, and flowering. As temperature increases (up to a point), photosynthesis, transpiration, and respiration increase.*
 
 *…”*
-*	Ambient light intensity: measuring light intensity near the plant will give us the amount of sunlight that the plant receives. Sunlight is very important for plants, as it enables photosynthesis. Different plants require different amounts of sunlight, for optimal growth. 
-*	Intensity of green color: this is a proxy for the growth of the plant. By capturing how much green there is in a picture of the plant, we can capture its vitality, and use this as an indicator of the general state of the plant. Of course, this is just a proxy measure, and will be accompanied by actual pictures of the plant. 
+
+**Ambient light intensity:** measuring light intensity near the plant will give us the amount of sunlight that the plant receives. Sunlight is very important for plants, as it enables photosynthesis. Different plants require different amounts of sunlight, for optimal growth. 
+
+**Intensity of green color:** this is a proxy for the growth of the plant. By capturing how much green there is in a picture of the plant, we can capture its vitality, and use this as an indicator of the general state of the plant. Of course, this is just a proxy measure, and will be accompanied by actual pictures of the plant. 
 ## Sensors Review
 **Photosensitive Light Sensor Module**
 
@@ -165,6 +170,64 @@ The wiring setup is expressed in Table 3.
 *Applicability*
 
 Again, since the soil moisture is not expected to vary drastically, the sampling rate of this device is more than enough. Also, with proper calibration, the results should be good enough for the data to be usable for later analysis. The sensor if more than enough in terms of sampling speed capacity, since we are going to be taking samples every minute, or every hour.
+
+**Camera Module**
+
+**INSERT FIGURE 9 WITH TITLE AND SOURCE**
+
+*Camera specifications*
+
+**INSERT CAMERA SPECIFICATIONS IMAGE OR TABLE**
+
+*Wiring schematic*
+
+Connecting the camera is very simple, as can be seen in the next animation.
+
+**INSERT FIGURE 10 WITH TITLE AND SOURCE**
+
+#Signal conditioning and processing
+Here, we will talk about how often we took samples for each sensor, and also how we decided to process and share the data. It is important to note that all the sensors we used have some kind of signal conditioning, and we will provide resources that show the structure of their circuit boards.
+*	Signal conditioning within sensor modules
+
+Temperature and Humidity sensor module circuit board: See Reference 10
+
+Light sensor module circuit board: See Reference 9
+
+Soil Moisture sensor module circuit board: See Reference 4
+
+* Sensor Output Sample rates
+
+The sample rate for the outputs that the sensors give (all except the camera) was one sample per hour. This is enough to capture the relevant fluctuations of the phenomena of interest. For the camera, we took a picture every 24 hs. This is also enough to monitor the state of the plant.
+
+*	Data Storage and IoT integration
+
+We decided to store the data locally, by writing it to a .csv file. This will make it easy for others to use the data if one decided to upload it somewhere. The pictures taken by the camera were also stored in a local folder. The code to do this is shown in Figure 11.
+
+**Image with code.**
+
+To share the data, we decided to tweet a daily summary of the data. To share this summary, we used the code in Figure 12. Instructions on how tweet using a Raspberry Pi can be found at Reference 6.
+
+**Image with code.**
+
+We also used the OpenChirp IoT platform to share our data in real time, and made use of its graphing capabilities. Instructions on how to use this platform with Raspberry Pi can be found at Reference 7. The code we used to do this is shown in Figure 13.
+
+**Image with code.**
+
+*	Data processing
+
+Here, we explain how we processed the signals sampled by the sensors:
+
+*Temperature and humidity sensor:* this sensor outputs temperature and humidity values, and so there is not much data processing necessary. The only problem we encountered was that it could give erroneous zero measures often. We decided to store the erroneous values as “NaN” entries, and let them be filtered by prospective data analysts. For the twitter summary, since we decided to use the average daily temperature and humidity, we used a special average function that did not include “Nan” values.
+
+*Soil moisture sensor*: after calibration (Soil Moisture Sensor Calibration Method 1 in Annex), the transfer function was included in the main code. The sampled values were stored, and a daily average was tweeted.
+
+*Light sensor*: after the calibration (Light Sensor Calibration in Annex), the transfer function was included in the main code. The sampled values were stored, and a daily average was tweeted.
+
+*Camera*: to process the daily picture, we first configured the camera settings to take consistent pictures (instructions on how to do this can be found in Reference 8). We then extracted the RBG values from the picture, and cropped the matrix so as to fit the plant with as little background as possible. Then, the average value of the Green matrix was used as the “Green Vitality” indicator, and this was tweeted.
+
+The code we used for data processing is shown in Figure 14.
+
+**Image with code.**
 
 
 ## Progress Report: 10-5-20
