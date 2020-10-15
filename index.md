@@ -227,7 +227,7 @@ Again, since the soil moisture is not expected to vary drastically, the sampling
 </p>
 
 *Camera specifications*
-
+***INSERT CAMERA SPECIFICATIONS***
 <p align="center">
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%2010.gif">
 </p>
