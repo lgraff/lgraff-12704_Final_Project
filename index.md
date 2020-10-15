@@ -185,9 +185,10 @@ Connecting the camera is very simple, as can be seen in the next animation.
 
 **INSERT FIGURE 10 WITH TITLE AND SOURCE**
 
-#Signal conditioning and processing
+## Signal conditioning and processing
 Here, we will talk about how often we took samples for each sensor, and also how we decided to process and share the data. It is important to note that all the sensors we used have some kind of signal conditioning, and we will provide resources that show the structure of their circuit boards.
-*	Signal conditioning within sensor modules
+
+**Signal conditioning within sensor modules**
 
 Temperature and Humidity sensor module circuit board: See Reference 10
 
@@ -195,11 +196,11 @@ Light sensor module circuit board: See Reference 9
 
 Soil Moisture sensor module circuit board: See Reference 4
 
-* Sensor Output Sample rates
+**Sensor Output Sample rates**
 
 The sample rate for the outputs that the sensors give (all except the camera) was one sample per hour. This is enough to capture the relevant fluctuations of the phenomena of interest. For the camera, we took a picture every 24 hs. This is also enough to monitor the state of the plant.
 
-*	Data Storage and IoT integration
+**Data Storage and IoT integration**
 
 We decided to store the data locally, by writing it to a .csv file. This will make it easy for others to use the data if one decided to upload it somewhere. The pictures taken by the camera were also stored in a local folder. The code to do this is shown in Figure 11.
 
@@ -213,11 +214,11 @@ We also used the OpenChirp IoT platform to share our data in real time, and made
 
 **Image with code.**
 
-*	Data processing
+**Data processing**
 
 Here, we explain how we processed the signals sampled by the sensors:
 
-*Temperature and humidity sensor:* this sensor outputs temperature and humidity values, and so there is not much data processing necessary. The only problem we encountered was that it could give erroneous zero measures often. We decided to store the erroneous values as “NaN” entries, and let them be filtered by prospective data analysts. For the twitter summary, since we decided to use the average daily temperature and humidity, we used a special average function that did not include “Nan” values.
+*Temperature and humidity sensor*: this sensor outputs temperature and humidity values, and so there is not much data processing necessary. The only problem we encountered was that it could give erroneous zero measures often. We decided to store the erroneous values as “NaN” entries, and let them be filtered by prospective data analysts. For the twitter summary, since we decided to use the average daily temperature and humidity, we used a special average function that did not include “Nan” values.
 
 *Soil moisture sensor*: after calibration (Soil Moisture Sensor Calibration Method 1 in Annex), the transfer function was included in the main code. The sampled values were stored, and a daily average was tweeted.
 
