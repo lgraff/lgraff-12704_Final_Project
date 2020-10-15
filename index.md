@@ -8,7 +8,8 @@ Growing plants indoors requires attention to a variety of environmental factors,
 ## Project Sketch
 Our setup is described in Figure 1.
 
-INSERT FIGURE 1 WITH TITLE AND SOURCE
+**INSERT FIGURE 1 WITH TITLE AND SOURCE**
+
 ## Main Goal
 To setup a sensing and data broadcasting system for homegrown plants.
 ## Specific Goals
@@ -22,68 +23,68 @@ To setup a sensing and data broadcasting system for homegrown plants.
 Here, we will establish what exacly are the physical phenomena we are measuring, and why they are of interest. Since all the phenomena here vary very slowly in time, they can all be considered static in nature.
 *	Soil moisture: this is basically the amount of water available in the soil. It can be measured as a ratio of volume of water per unit volume of soil, or as a ratio of water mass per unit mass of soil. We opt for the second measure because it is easier to measure, and so the calibration of the soil moisture sensor is easy to do at home. The importance of this variable for plant growth is widely known. Here, I quote a passage from Reference 1:
 
-“…
+*“…*
 
-Importance of Soil Water:
+*Importance of Soil Water:*
 
--Soil water serves as a solvent and carrier of food nutrients for plant growth
+*-Soil water serves as a solvent and carrier of food nutrients for plant growth*
 
--Yield of crop is more often determined by the amount of water available rather than the deficiency of other food nutrients
+*-Yield of crop is more often determined by the amount of water available rather than the deficiency of other food nutrients*
 
--Soil water acts as a nutrient itself
+*-Soil water acts as a nutrient itself*
 
--Soil water regulates soil temperature
+*-Soil water regulates soil temperature*
 
--Soil forming processes and weathering depend on water
+*-Soil forming processes and weathering depend on water*
 
--Microorganisms require water for their metabolic activities
+*-Microorganisms require water for their metabolic activities*
 
--Soil water helps in chemical and biological activities of soil
+*-Soil water helps in chemical and biological activities of soil*
 
--It is a principal constituent of the growing plant
+*-It is a principal constituent of the growing plant*
 
--Water is essential for photosynthesis
+*-Water is essential for photosynthesis*
 
-…”
+*…”*
 *	Ambient humidity: roughly defined as the amount of water in the air, relative to the maximum amount of water the air can hold at a given temperature. The strict definition is taken from Reference 2:
 
-“…
+*“…*
 
-The relative humidity (RH) is the ratio of the actual water vapour pressure to the saturation water vapour pressure at the prevailing temperature. For example – if a cubic metre can hold 100ml of water at 20 degrees centigrade (273 K) and it does contain 100ml then it is said to be 100% RH. If the same cubic metre of air at the same temperature only contains 50mls of water then it is described as 50% RH.
+*The relative humidity (RH) is the ratio of the actual water vapour pressure to the saturation water vapour pressure at the prevailing temperature. For example – if a cubic metre can hold 100ml of water at 20 degrees centigrade (273 K) and it does contain 100ml then it is said to be 100% RH. If the same cubic metre of air at the same temperature only contains 50mls of water then it is described as 50% RH.*
 
-…”
+*…”*
 
 The importance of this factor from plant growth is explained in the next passage, taken from Reference 3:
 
-“…
+*“…*
 
-If your grow room humidity is low (dry), it causes the plants to transpire much more rapidly than in a higher humidity environment. When this happens, the leaves become flaccid and begin to wilt, and over a longer period of time the plant will close its stomata, and reduce the flow of water out of the plant. This is very effective at stopping water loss, but unfortunately, it also reduces the intake of CO2. Without an adequate supply of CO2, the cells will begin to die, and the plant will look tired and ill.
+*If your grow room humidity is low (dry), it causes the plants to transpire much more rapidly than in a higher humidity environment. When this happens, the leaves become flaccid and begin to wilt, and over a longer period of time the plant will close its stomata, and reduce the flow of water out of the plant. This is very effective at stopping water loss, but unfortunately, it also reduces the intake of CO2. Without an adequate supply of CO2, the cells will begin to die, and the plant will look tired and ill.*
 
-…”
+*…”*
 *	Ambient temperature: this is just the temperature of the room in which the plant is. This factor affects most plant processes. The next passage is taken from Reference 4:
 
-“…
+*“…*
 
-Temperature influences most plant processes, including photosynthesis, transpiration, respiration, germination, and flowering. As temperature increases (up to a point), photosynthesis, transpiration, and respiration increase.
+*Temperature influences most plant processes, including photosynthesis, transpiration, respiration, germination, and flowering. As temperature increases (up to a point), photosynthesis, transpiration, and respiration increase.*
 
-…”
+*…”*
 *	Ambient light intensity: measuring light intensity near the plant will give us the amount of sunlight that the plant receives. Sunlight is very important for plants, as it enables photosynthesis. Different plants require different amounts of sunlight, for optimal growth. 
 *	Intensity of green color: this is a proxy for the growth of the plant. By capturing how much green there is in a picture of the plant, we can capture its vitality, and use this as an indicator of the general state of the plant. Of course, this is just a proxy measure, and will be accompanied by actual pictures of the plant. 
 ## Sensors Review
-* Photosensitive Light Sensor Module
+**Photosensitive Light Sensor Module**
 
-INSERT FIGURE 2 WITH TITLE AND SOURCE
+**INSERT FIGURE 2 WITH TITLE AND SOURCE**
 
-Working principle
+*Working principle*
 This sensor works based on the concept of photoconductivity. The red tip with the wiggly wire is a photoresistor. We can see a sketch of its components in Figure 3.
 
-INSERT FIGURE 3 WITH TITLE AND SOURCE
+**INSERT FIGURE 3 WITH TITLE AND SOURCE**
 
 A photoresistor is made of a material that, when exposed to light, experiences a decrease in its resistivity. This translates to a change in the voltage output of the signal (Figure 4).
 
-INSERT FIGURE 4 WITH TITLE AND SOURCE
+**INSERT FIGURE 4 WITH TITLE AND SOURCE**
 
-Specifications
+*Specifications*
 
 From Reference 5, we can gather the following specifications:
 * working voltage: 3.3~5V
@@ -91,11 +92,80 @@ From Reference 5, we can gather the following specifications:
 * analog signal (voltage output on A pin)
 * output current >= 15mA, can directly light LED.
 
-Wiring schematic
+*Wiring schematic*
 
 We are using the analog pin of the module, so we need to connect the module’s signal pin to one of the channels of the ADC. The wiring setup is expressed in Table 1
 
-INSERT TABLE 1 WITH TITLE AND SOURCE
+**INSERT TABLE 1 WITH TITLE AND SOURCE**
+
+*Applicability*
+
+It is worth noting that this light sensor is not calibrated, and that every sensor, even of the same brand and batch, is likely to output different values for the same period. Hence, this should only be used as an indicator of how much hours of sunlight the plant has received, rather than trying to quantify the actual value of light intensity. The sampling rate is practically irrelevant, since we will be measuring every minute, or every hour.
+
+**DHT11 Temperature and Humidity Sensor Module**
+
+**INSERT FIGURE 5 WITH TITLE AND SOURCE**
+
+*Working principle*
+
+To measure ambient humidity, the module has two electrodes embedded in a substrate that is capable of absorbing moisture. When there is more moisture in the environment, the substrate absorbs more vapor, which in turn allows it to shed more ions and hence lower its resistance.
+
+To measure temperature, it uses a thermistor, which is a resistor that changes its resistance with temperature much more sensibly than a common resistor. 
+
+We can see the inner components of the sensor in Figure 6.
+
+**INSERT FIGURE 6 WITH TITLE AND SOURCE**
+
+As we can see, the module has its own ADC, and it also saves the transfer function. Because of this, its output is already the temperature and humidity values. 
+
+*Specifications*
+
+The specifications of this output can be seen in Figure 7 (DHT11 column).
+
+**INSERT FIGURE 7 WITH TITLE AND SOURCE**
+
+*Wiring schematic*
+
+The wiring setup is expressed in Table 2
+
+**INSERT TABLE 2 WITH TITLE AND SOURCE**
+
+*Applicability*
+
+Since we expect the temperature and humidity to vary slowly, there is no need to sample at higher rates than 1Hz. Also, the humidity and temperature accuracy are enough for our home growing purposes.
+
+**Soil Moisture Sensor Module**
+
+**INSERT FIGURE 8 WITH TITLE AND SOURCE**
+
+*Working principle*
+
+This sensor works in exactly the same way as the humidity sensor. It consists of two electrodes embedded in a dielectric. The moisture in the soil changes the conductivity of the dielectric, and thus the output signal.
+
+This sensor does not come with a built-in transfer function, and it outputs the voltage of the signal. We need to calibrate this sensor with a sample of the soil we intend to work with. To do this, we used Soil Moisture Sensor Calibration Method 1 in the Annex. For more representative results, one should use Method 2. However, due to not being able to collect a large enough soil sample, we opted for Method 1.
+
+The resulting transfer function is a straight line between: 1234.1234V for 0% RH, and 1234.1324V for 100% RH.
+
+*Specifications*
+
+From Reference 4, we can gather the following specifications:
+•	Operating Voltage: 3.3 ~ 5.5 V
+•	DC Output Voltage: 0 ~ 3.0V
+•	DC Operating Current: 5mA
+•	Interface: PH2.0-3P
+•	Dimensions: 3.86 x 0.905 inches (L x W)
+•	Weight: 15g
+
+*Wiring schematic*
+
+The wiring setup is expressed in Table 3.
+
+**INSERT TABLE 3 WITH TITLE AND SOURCE**
+
+*Applicability*
+
+Again, since the soil moisture is not expected to vary drastically, the sampling rate of this device is more than enough. Also, with proper calibration, the results should be good enough for the data to be usable for later analysis. The sensor if more than enough in terms of sampling speed capacity, since we are going to be taking samples every minute, or every hour.
+
 
 ## Progress Report: 10-5-20
 
