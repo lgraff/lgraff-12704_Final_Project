@@ -165,7 +165,7 @@ The wiring setup is expressed in Table 2
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Table%202.png">
 </p>
 <p align="center">
-  <b>Table 2. Wiring Setup for DHT11 Temperature and Humidity Sensor Module. Source: Self
+  Table 2. Wiring Setup for DHT11 Temperature and Humidity Sensor Module. Source: Self
 </p>
 
 *Applicability*
@@ -237,7 +237,7 @@ Again, since the soil moisture is not expected to vary drastically, the sampling
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%2010.gif">
 </p>
 <p align="center">
-  <b>Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
+  Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
 </p>
 
 *Wiring schematic*
@@ -323,7 +323,7 @@ The code we used for data processing is shown in Figure 14.
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%205.jpg">
 </p>
 <p align="center">
-  <b>Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
+  Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
 </p>
 
 ## Final Setup
@@ -335,7 +335,7 @@ The code we used for data processing is shown in Figure 14.
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%205.jpg">
 </p>
 <p align="center">
-  <b>Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
+  Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
 </p>
 
 **Physical Setup:** the setup sketch in Figure 1 was materialized as can be seen in Figure 16.
@@ -346,7 +346,7 @@ The code we used for data processing is shown in Figure 14.
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%205.jpg">
 </p>
 <p align="center">
-  <b>Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
+  Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
 </p>
 
 ## Experiments and Results
@@ -360,7 +360,7 @@ After running our code to collect data for XX days, we got the following results
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%205.jpg">
 </p>
 <p align="center">
-  <b>Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
+  Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
 </p>
 
 **Twitter:** our program successfully tweeted our results as intended. A tweet can be seen in Figure 18.
@@ -371,7 +371,7 @@ After running our code to collect data for XX days, we got the following results
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%205.jpg">
 </p>
 <p align="center">
-  <b>Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
+  Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
 </p>
 
 **Open Chirp:** our program successfully connected live to the OpenChirp IoT platform. The resulting graphs can be seen in Figure 19.
@@ -382,7 +382,7 @@ After running our code to collect data for XX days, we got the following results
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%205.jpg">
 </p>
 <p align="center">
-  <b>Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
+  Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
 </p>
 
 *DISCUSS OPEN CHIRP RESLTS*
