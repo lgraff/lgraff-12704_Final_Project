@@ -282,7 +282,7 @@ We decided to store the data locally, by writing it to a .csv file. This will ma
   Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
 </p>
 
-To share the data, we decided to tweet a daily summary of the data. To share this summary, we used the code in Figure 12. Instructions on how tweet using a Raspberry Pi can be found at Reference 6.
+To share the data, we decided to tweet a daily summary of the data. To share this summary, we used the code in Figure 12. Instructions on how tweet using a Raspberry Pi can be found at Reference 18.
 
 **Image with code.**
 
@@ -293,7 +293,7 @@ To share the data, we decided to tweet a daily summary of the data. To share thi
   Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
 </p>
 
-We also used the OpenChirp IoT platform to share our data in real time, and made use of its graphing capabilities. Instructions on how to use this platform with Raspberry Pi can be found at Reference 14. The code we used to do this is shown in Figure 13.
+We also used the OpenChirp IoT platform to share our data in real time, and made use of its graphing capabilities. Instructions on how to use this platform with Raspberry Pi can be found at Reference 19. The code we used to do this is shown in Figure 13.
 
 **Image with code.**
 
@@ -441,6 +441,10 @@ Finally, with a little more time, one could add an automatic size detection algo
 [Reference 16](https://components101.com/sites/default/files/component_datasheet/DHT11-Temperature-Sensor.pdf )
 
 [Reference 17]( https://www.sunrom.com/p/light-sensing-module-ldr )
+
+[Reference 18](https://projects.raspberrypi.org/en/projects/getting-started-with-the-twitter-api)
+
+[Reference 19](https://inferlab.github.io/12740/tutorials/openchirp.html )
 ## Annex: Calibration Procedures
 ***Soil Moisture Calibration Method 1 (Source: Reference 14)***
 
