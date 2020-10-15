@@ -407,37 +407,39 @@ Some features that would be interesting to add would be actuators like a water p
 Finally, with a little more time, one could add an automatic size detection algorithm to the image processing part, to monitor plant growth in real time.
 
 ## References
-[Reference 1]( www.vectorstock.com/24932206)
+[Reference 1]( https://www.vectorstock.com/24932206)
 
-[Reference 2]( www.vectorstock.com/13231070)
+[Reference 2]( https://www.vectorstock.com/13231070)
 
-[Reference 3]( www.shutterstock.com/search/camera+side+view)
+[Reference 3]( https://www.shutterstock.com/search/camera+side+view)
 
 [Reference 4]( http://ieassa.org/en/soil-moisture-importance/)
 
 [Reference 5]( https://www.nfsa.gov.au/preservation/preservation-glossary/relative-humidity-rh)
 
-[Reference 6]( https://www.scienceprojects.org/how-does-the-temperature-affect-the-plant-growth/#:~:text=Effect%20of%20temperature%20on%20plants&text=Temperature%20influences%20most%20plant%20processes,%2C%20transpiration%2C%20and%20respiration%20increase )
+[Reference 6](https://gardenculturemagazine.com/grow-room-humidity-important/#:~:text=If%20your%20grow%20room%20humidity,water%20out%20of%20the%20plant.)
 
-[Reference 7]( https://www.sigmaelectronica.net/wp-content/uploads/2018/04/sen0193-humedad-de-suelos.pdf )
+[Reference 7]( https://www.scienceprojects.org/how-does-the-temperature-affect-the-plant-growth/#:~:text=Effect%20of%20temperature%20on%20plants&text=Temperature%20influences%20most%20plant%20processes,%2C%20transpiration%2C%20and%20respiration%20increase )
 
-[Reference 8]( https://www.freva.com/wp-content/uploads/2019/06/light_sensor-416x713.jpg)
+[Reference 8]( https://www.sigmaelectronica.net/wp-content/uploads/2018/04/sen0193-humedad-de-suelos.pdf )
 
-[Reference 9]( https://kookye.com/2018/11/16/arduino-lesson-sound-detection-sensor-2/)
+[Reference 9]( https://www.freva.com/wp-content/uploads/2019/06/light_sensor-416x713.jpg)
 
-[Reference 10]( http://www.uugear.com/portfolio/using-light-sensor-module-with-raspberry-pi/)
+[Reference 10]( https://kookye.com/2018/11/16/arduino-lesson-sound-detection-sensor-2/)
 
-[Reference 11]( https://www.raspberrypi-spy.co.uk/2017/09/dht11-temperature-and-humidity-sensor-raspberry-pi/ )
+[Reference 11]( http://www.uugear.com/portfolio/using-light-sensor-module-with-raspberry-pi/)
 
-[Reference 12]( https://kookye.com/2018/11/16/arduino-lesson-dht11-sensor/ )
+[Reference 12]( https://www.raspberrypi-spy.co.uk/2017/09/dht11-temperature-and-humidity-sensor-raspberry-pi/ )
 
-[Reference 13]( https://www.switchdoc.com/2020/06/tutorial-capacitive-moisture-sensor-grove/ )
+[Reference 13]( https://kookye.com/2018/11/16/arduino-lesson-dht11-sensor/ )
 
-[Reference 14]( https://projects.raspberrypi.org/en/projects/getting-started-with-picamera )
+[Reference 14]( https://www.switchdoc.com/2020/06/tutorial-capacitive-moisture-sensor-grove/ )
 
-[Reference 15]( https://www.sunrom.com/p/light-sensing-module-ldr)
+[Reference 15]( https://projects.raspberrypi.org/en/projects/getting-started-with-picamera )
 
-[Reference 16]( https://www.sunrom.com/p/light-sensing-module-ldr )
+[Reference 16](https://components101.com/sites/default/files/component_datasheet/DHT11-Temperature-Sensor.pdf )
+
+[Reference 17]( https://www.sunrom.com/p/light-sensing-module-ldr )
 ## Annex: Calibration Procedures
 ***Soil Moisture Calibration Method 1 (Source: Reference 7)***
 
