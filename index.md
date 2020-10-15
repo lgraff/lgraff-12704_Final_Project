@@ -184,7 +184,7 @@ This sensor works in exactly the same way as the humidity sensor. It consists of
 
 This sensor does not come with a built-in transfer function, and it outputs the voltage of the signal. We need to calibrate this sensor with a sample of the soil we intend to work with. To do this, we used Soil Moisture Sensor Calibration Method 1 in the Annex. For more representative results, one should use Method 2. However, due to not being able to collect a large enough soil sample, we opted for Method 1.
 
-The resulting transfer function is a straight line between: 1234.1234V for 0% RH, and 1234.1324V for 100% RH.
+The resulting transfer function is a straight line following the equation in the Annex (see Soil Moisture Sensor Calibration Method 1)
 
 *Specifications*
 
@@ -456,6 +456,12 @@ Finally, with a little more time, one could add an automatic size detection algo
 2-	Dip the sensor in a glass of water, to the depth that you will insert it in the soil. Make several measurements, and average the values of voltage. This value will correspond 1to 100% RH.
 
 3-	The transfer function will be an interpolation of the line that passes through these points
+
+The resulting equation when we performed this method was the following:
+
+<p align="center">
+  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/eqnmoist.PNG">
+</p>
 
 ***Soil Moisture Calibration Method 2 (Mass to Mass ratio)***
 
