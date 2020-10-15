@@ -196,10 +196,15 @@ The resulting transfer function is a straight line between: 1234.1234V for 0% RH
 From Reference 14, we can gather the following specifications:
 
 •	Operating Voltage: 3.3 ~ 5.5 V
+
 •	DC Output Voltage: 0 ~ 3.0V
+
 •	DC Operating Current: 5mA
+
 •	Interface: PH2.0-3P
+
 •	Dimensions: 3.86 x 0.905 inches (L x W)
+
 •	Weight: 15g
 
 *Wiring schematic*
@@ -314,7 +319,7 @@ Here, we explain how we processed the signals sampled by the sensors:
 
 *Light sensor*: after the calibration (Light Sensor Calibration in Annex), the transfer function was included in the main code. The sampled values were stored, and a daily average was tweeted.
 
-*Camera*: to process the daily picture, we first configured the camera settings to take consistent pictures (instructions on how to do this can be found in Reference 8). We then extracted the RBG values from the picture, and cropped the matrix so as to fit the plant with as little background as possible. Then, the average value of the Green matrix was used as the “Green Vitality” indicator, and this was tweeted.
+*Camera*: to process the daily picture, we first configured the camera settings to take consistent pictures (instructions on how to do this can be found in Reference 15). We then extracted the RBG values from the picture, and cropped the matrix so as to fit the plant with as little background as possible. Then, the average value of the Green matrix was used as the “Green Vitality” indicator, and this was tweeted.
 
 The code we used for data processing is shown in Figure 14.
 
