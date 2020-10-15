@@ -13,7 +13,7 @@ Our setup is described in Figure 1.
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%201.png">
 </p>
 <p align="center">
-  Figure 1. Sensing and Data Broadcasting System sketch. Source: Figure Reference 8-10
+  Figure 1. Sensing and Data Broadcasting System sketch. Source: Figure Reference 1-3
 </p>
 
 ## Main Goal
@@ -28,7 +28,7 @@ To setup a sensing and data broadcasting system for homegrown plants.
 ## Phenomena of Interest
 Here, we will establish what exacly are the physical phenomena we are measuring, and why they are of interest. Since all the phenomena here vary very slowly in time, they can all be considered static in nature.
 
-**Soil moisture:** this is basically the amount of water available in the soil. It can be measured as a ratio of volume of water per unit volume of soil, or as a ratio of water mass per unit mass of soil. We opt for the second measure because it is easier to measure, and so the calibration of the soil moisture sensor is easy to do at home. The importance of this variable for plant growth is widely known. Here, I quote a passage from Reference 1:
+**Soil moisture:** this is basically the amount of water available in the soil. It can be measured as a ratio of volume of water per unit volume of soil, or as a ratio of water mass per unit mass of soil. We opt for the second measure because it is easier to measure, and so the calibration of the soil moisture sensor is easy to do at home. The importance of this variable for plant growth is widely known. Here, I quote a passage from Reference 4:
 
 *“…Importance of Soil Water:*
 
@@ -50,15 +50,15 @@ Here, we will establish what exacly are the physical phenomena we are measuring,
 
 *-Water is essential for photosynthesis…”*
 
-**Ambient humidity:** roughly defined as the amount of water in the air, relative to the maximum amount of water the air can hold at a given temperature. The strict definition is taken from Reference 2:
+**Ambient humidity:** roughly defined as the amount of water in the air, relative to the maximum amount of water the air can hold at a given temperature. The strict definition is taken from Reference 5:
 
 *“…The relative humidity (RH) is the ratio of the actual water vapour pressure to the saturation water vapour pressure at the prevailing temperature. For example – if a cubic metre can hold 100ml of water at 20 degrees centigrade (273 K) and it does contain 100ml then it is said to be 100% RH. If the same cubic metre of air at the same temperature only contains 50mls of water then it is described as 50% RH…”*
 
-The importance of this factor from plant growth is explained in the next passage, taken from Reference 3:
+The importance of this factor from plant growth is explained in the next passage, taken from Reference 6:
 
 *“…If your grow room humidity is low (dry), it causes the plants to transpire much more rapidly than in a higher humidity environment. When this happens, the leaves become flaccid and begin to wilt, and over a longer period of time the plant will close its stomata, and reduce the flow of water out of the plant. This is very effective at stopping water loss, but unfortunately, it also reduces the intake of CO2. Without an adequate supply of CO2, the cells will begin to die, and the plant will look tired and ill…”*
 
-**Ambient temperature:** this is just the temperature of the room in which the plant is. This factor affects most plant processes. The next passage is taken from Reference 4:
+**Ambient temperature:** this is just the temperature of the room in which the plant is. This factor affects most plant processes. The next passage is taken from Reference 7:
 
 *“…Temperature influences most plant processes, including photosynthesis, transpiration, respiration, germination, and flowering. As temperature increases (up to a point), photosynthesis, transpiration, and respiration increase…”*
 
@@ -72,7 +72,7 @@ The importance of this factor from plant growth is explained in the next passage
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%202.png">
 </p>
 <p align="center">
-  Figure 2. Light Sensor Module. Source: Figure Reference 1
+  Figure 2. Light Sensor Module. Source: Reference 8
 </p>
 
 *Working principle*
@@ -82,7 +82,7 @@ This sensor works based on the concept of photoconductivity. The red tip with th
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%203.png">
 </p>
 <p align="center">
-  Figure 3. Photoresistor basic composition. Source: Figure Reference 2
+  Figure 3. Photoresistor basic composition. Source: Reference 9
 </p>
 
 A photoresistor is made of a material that, when exposed to light, experiences a decrease in its resistivity. This translates to a change in the voltage output of the signal (Figure 4).
@@ -91,12 +91,12 @@ A photoresistor is made of a material that, when exposed to light, experiences a
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%204.png">
 </p>
 <p align="center">
-  Figure 4. Example of Voltage Output vs. Photoresistor’s Resistance. Source: Figure Reference 2
+  Figure 4. Example of Voltage Output vs. Photoresistor’s Resistance. Source: Reference 9
 </p>
 
 *Specifications*
 
-From Reference 5, we can gather the following specifications:
+From Reference 10, we can gather the following specifications:
 * working voltage: 3.3~5V
 * output: digital switching (LOW or HIGH voltage on D pin) 
 * analog signal (voltage output on A pin)
@@ -123,7 +123,7 @@ It is worth noting that this light sensor is not calibrated, and that every sens
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%205.jpg">
 </p>
 <p align="center">
-  Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
+  Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Reference 11
 </p>
 
 *Working principle*
@@ -139,7 +139,7 @@ We can see the inner components of the sensor in Figure 6.
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%206.jpg">
 </p>
 <p align="center">
-  Figure 6. Inner structure of DHT11 Temperature and Humidity Module. Source: Figure Reference 5
+  Figure 6. Inner structure of DHT11 Temperature and Humidity Module. Source: Reference 12
 </p>
 
 As we can see, the module has its own ADC, and it also saves the transfer function. Because of this, its output is already the temperature and humidity values. 
@@ -153,7 +153,7 @@ The specifications of this output can be seen in Figure 7 (DHT11 column).
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%207.png">
 </p>
 <p align="center">
-  Figure 7. Output specifications for DHT11. Source: Figure Reference 5
+  Figure 7. Output specifications for DHT11. Source: Reference 12
 </p>
   
 *Wiring schematic*
@@ -180,7 +180,7 @@ Since we expect the temperature and humidity to vary slowly, there is no need to
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%208.png">
 </p>
 <p align="center">
-  Figure 8. Soil Moisture Sensor. Source: Figure Reference 6
+  Figure 8. Soil Moisture Sensor. Source: Reference 13
 </p>
 
 *Working principle*
@@ -193,7 +193,7 @@ The resulting transfer function is a straight line between: 1234.1234V for 0% RH
 
 *Specifications*
 
-From Reference 4, we can gather the following specifications:
+From Reference 7, we can gather the following specifications:
 •	Operating Voltage: 3.3 ~ 5.5 V
 •	DC Output Voltage: 0 ~ 3.0V
 •	DC Operating Current: 5mA
@@ -226,7 +226,7 @@ Again, since the soil moisture is not expected to vary drastically, the sampling
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%209.png">
 </p>
 <p align="center">
-  Figure 9. Camera Module. Source: Figure Reference 7
+  Figure 9. Camera Module. Source: Reference 14
 </p>
 
 *Camera specifications*
@@ -250,7 +250,7 @@ Connecting the camera is very simple, as can be seen in the next animation.
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%2010.gif">
 </p>
 <p align="center">
-  Figure 10. Camera module connection animation. Source: Figure Reference 7
+  Figure 10. Camera module connection animation. Source: Reference 14
 </p>
 
 ## Signal conditioning and processing
@@ -258,11 +258,11 @@ Here, we will talk about how often we took samples for each sensor, and also how
 
 **Signal conditioning within sensor modules**
 
-Temperature and Humidity sensor module circuit board: See Reference 10
+Temperature and Humidity sensor module circuit board: See Reference 15
 
-Light sensor module circuit board: See Reference 9
+Light sensor module circuit board: See Reference 16
 
-Soil Moisture sensor module circuit board: See Reference 4
+Soil Moisture sensor module circuit board: See Reference 7
 
 **Sensor Output Sample rates**
 
@@ -407,9 +407,39 @@ Some features that would be interesting to add would be actuators like a water p
 Finally, with a little more time, one could add an automatic size detection algorithm to the image processing part, to monitor plant growth in real time.
 
 ## References
+[Reference 1]( www.vectorstock.com/24932206)
 
+[Reference 2]( www.vectorstock.com/13231070)
+
+[Reference 3]( www.shutterstock.com/search/camera+side+view)
+
+[Reference 4]( http://ieassa.org/en/soil-moisture-importance/)
+
+[Reference 5]( https://www.nfsa.gov.au/preservation/preservation-glossary/relative-humidity-rh)
+
+[Reference 6]( https://www.scienceprojects.org/how-does-the-temperature-affect-the-plant-growth/#:~:text=Effect%20of%20temperature%20on%20plants&text=Temperature%20influences%20most%20plant%20processes,%2C%20transpiration%2C%20and%20respiration%20increase )
+
+[Reference 7]( https://www.sigmaelectronica.net/wp-content/uploads/2018/04/sen0193-humedad-de-suelos.pdf )
+
+[Reference 8]( https://www.freva.com/wp-content/uploads/2019/06/light_sensor-416x713.jpg)
+
+[Reference 9]( https://kookye.com/2018/11/16/arduino-lesson-sound-detection-sensor-2/)
+
+[Reference 10]( http://www.uugear.com/portfolio/using-light-sensor-module-with-raspberry-pi/)
+
+[Reference 11]( https://www.raspberrypi-spy.co.uk/2017/09/dht11-temperature-and-humidity-sensor-raspberry-pi/ )
+
+[Reference 12]( https://kookye.com/2018/11/16/arduino-lesson-dht11-sensor/ )
+
+[Reference 13]( https://www.switchdoc.com/2020/06/tutorial-capacitive-moisture-sensor-grove/ )
+
+[Reference 14]( https://projects.raspberrypi.org/en/projects/getting-started-with-picamera )
+
+[Reference 15]( https://www.sunrom.com/p/light-sensing-module-ldr)
+
+[Reference 16]( https://www.sunrom.com/p/light-sensing-module-ldr )
 ## Annex: Calibration Procedures
-***Soil Moisture Calibration Method 1***
+***Soil Moisture Calibration Method 1 (Source: Reference 7)***
 
 1-	Make several measurements when the sensor is dry (in the air, not inserted in the soil). Average the values of voltage. This value will correspond to 0% RH.
 
