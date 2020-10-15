@@ -14,7 +14,7 @@ Our setup is described in Figure 1.
 </p>
 <p align="center">
   <b>Figure 1. Sensing and Data Broadcasting System sketch. Source: Figure Reference 8-10
-  <>
+  <\b>
 </p>
 
 ## Main Goal
