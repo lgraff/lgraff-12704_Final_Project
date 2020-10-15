@@ -227,13 +227,19 @@ Again, since the soil moisture is not expected to vary drastically, the sampling
 </p>
 
 *Camera specifications*
-***INSERT CAMERA SPECIFICATIONS***
-<p align="center">
-  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%2010.gif">
-</p>
-<p align="center">
-  Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 15
-</p>
+
+From Reference 20, we can gather the following specifications:
+
+•	2592 x 1944 static pixel resolution
+
+•	L 25mm x W 24mm x H 7.5mm
+
+•	15 cm ribbon cable
+
+•	Angle of view: 54 x 41 degrees
+
+•	Field of view: 2.0 x 1.33 m at 2 m
+
 
 *Wiring schematic*
 
@@ -437,6 +443,11 @@ Finally, with a little more time, one could add an automatic size detection algo
 [Reference 18](https://projects.raspberrypi.org/en/projects/getting-started-with-the-twitter-api)
 
 [Reference 19](https://inferlab.github.io/12740/tutorials/openchirp.html )
+
+[Reference 20](https://www.desertcart.us/products/160041787-raspberry-pi-camera-video-module-5-megapixel-1080-p-mini-webcam-sensor-ov-5647-for-raspberry-pi-model-a-b-b-r-pi-2-b-pi-3-b-3-b-and-pi-4-b)
+
+[Reference 21](https://www.scientificamerican.com/article/science-with-a-smartphone-measure-light-with-lux/)
+
 ## Annex: Calibration Procedures
 ***Soil Moisture Calibration Method 1 (Source: Reference 14)***
 
@@ -462,9 +473,19 @@ Finally, with a little more time, one could add an automatic size detection algo
 
 7-	The transfer function can be either a polynomial fit to the points, or a direct linear interpolation between the points.
 
-***Light Sensor Calibration Procedure***
+***Light Sensor Calibration Procedure (Source: Reference 21)***
 
-**INSERT PROCEDURE**
+Calibrating the light sensor involved comparing voltage readings from the sensor with light intensity measurements taken from a Lux meter. To obtain a Lux meter, we downloaded a smartphone app called “LUX Light Meter FREE”, which detects light intensity via the phone’s camera. We then placed the light sensor and phone side-by-side in a cardboard box, folding the sides of the box so that light was only able to enter the box through ¼ of the top surface. The purpose of this setup was to ensure that we only captured the light directly hitting the surface of the sensor. This is in accordance with the recommendation of Reference[X], which suggests that the light sensor and light source should be perpendicular to each other. We recognize, however, that our process was not entirely accurate since the top surface was large enough to allow light to enter diagonally.
+
+Once our setup was complete, we took 15 different measurements of voltage of Lux. The box was placed in different locations and another phone was used to directly shine bright lights on the sensors. These points were then plotted in Figure A below: 
+
+***INSERT FIGURE A***
+
+We observe a nonlinear relationship between voltage and Lux. We then transform the axes to a log-log scale, as shown in Figure B.
+
+***INSERT FIGURE B***
+
+The transformed scale exposes a relatively linear relationship between log(voltage) and log(lux). We perform a least squares linear fit and find the following relationship: log(voltage) = -0.165*log(Lux) + 1.138. Using this relationship, we can convert between the sensor’s voltage value and a light intensity value that will be displayed to users.
 
 
 ## Progress Report: 10-5-20
