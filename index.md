@@ -68,12 +68,22 @@ The importance of this factor from plant growth is explained in the next passage
 ## Sensors Review
 **Photosensitive Light Sensor Module**
 
-**INSERT FIGURE 2 WITH TITLE AND SOURCE**
+<p align="center">
+  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%202.png">
+</p>
+<p align="center">
+  <b>Figure 2. Light Sensor Module. Source: Figure Reference 1
+</p>
 
 *Working principle*
 This sensor works based on the concept of photoconductivity. The red tip with the wiggly wire is a photoresistor. We can see a sketch of its components in Figure 3.
 
-**INSERT FIGURE 3 WITH TITLE AND SOURCE**
+<p align="center">
+  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%203.png">
+</p>
+<p align="center">
+  <b>Figure 3. Photoresistor basic composition. Source: Figure Reference 2
+</p>
 
 A photoresistor is made of a material that, when exposed to light, experiences a decrease in its resistivity. This translates to a change in the voltage output of the signal (Figure 4).
 
