@@ -427,13 +427,13 @@ Finally, with a little more time, one could add an automatic size detection algo
 
 [Reference 10]( http://www.uugear.com/portfolio/using-light-sensor-module-with-raspberry-pi/)
 
-[Reference 11]( https://kookye.com/2018/11/16/arduino-lesson-dht11-sensor/ )
+[Reference 11]( https://www.raspberrypi-spy.co.uk/2017/09/dht11-temperature-and-humidity-sensor-raspberry-pi/ )
 
-[Reference 12]( https://www.raspberrypi-spy.co.uk/2017/09/dht11-temperature-and-humidity-sensor-raspberry-pi/ )
+[Reference 12]( https://kookye.com/2018/11/16/arduino-lesson-dht11-sensor/ )
 
-[Reference 13]( https://www.sigmaelectronica.net/wp-content/uploads/2018/04/sen0193-humedad-de-suelos.pdf )
+[Reference 13]( https://www.switchdoc.com/2020/06/tutorial-capacitive-moisture-sensor-grove/ )
 
-[Reference 14]( https://www.switchdoc.com/2020/06/tutorial-capacitive-moisture-sensor-grove/ )
+[Reference 14]( https://www.sigmaelectronica.net/wp-content/uploads/2018/04/sen0193-humedad-de-suelos.pdf )
 
 [Reference 15]( https://projects.raspberrypi.org/en/projects/getting-started-with-picamera )
 
