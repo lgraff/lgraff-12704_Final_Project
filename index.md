@@ -479,7 +479,9 @@ Calibrating the light sensor involved comparing voltage readings from the sensor
 
 Once our setup was complete, we took 15 different measurements of voltage of Lux. The box was placed in different locations and another phone was used to directly shine bright lights on the sensors. These points were then plotted in Figure A below: 
 
-***INSERT FIGURE A***
+<p align="center">
+  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/CalibA.PNG">
+</p>
 
 We observe a nonlinear relationship between voltage and Lux. We then transform the axes to a log-log scale, as shown in Figure B.
 
@@ -488,7 +490,9 @@ We observe a nonlinear relationship between voltage and Lux. We then transform t
 The transformed scale exposes a relatively linear relationship between log(voltage) and log(lux). We perform a least squares linear fit and find the following relationship: log(voltage) = -0.165*log(Lux) + 1.138. Using this relationship, we can convert between the sensor’s voltage value and a light intensity value that will be displayed to users.
 
 
-## Progress Report: 10-5-20
+<p align="center">
+  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/CalibB.PNG">
+</p>
 
 ### Current Progress
 - Set up the circuit for all sensors and confirmed that they are taking measurements when exposed to physical stimuli. This includes the temperature/humidity sensor, light sensor, and soil moisture sensor. The soil moisture sensor was something we purchased externally. We also tested that this circuit works specifically in the environment of the basil plant subject we're using.
