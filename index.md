@@ -3,12 +3,13 @@
 
 ## Introduction
 ## Motivation
+Growing plants indoors requires attention to a variety of environmental factors, including temperature, humidity, light, and soil moisture levels. Regulation of these parameters can be difficult, especially when there is sparse data concerning ideal growing conditions for individual plants. Specifically for the basil herb, a quick online search reveals several different choices than an individual may make when tuning the ambient environmental factors (*SOURCES*). Notably, however, these sources are primarily anecdotal; basil growers have yet to document the environmental conditions and associated growth patterns of their plant over time. To address these needs, we propose Hi-Tech Basil: a tweeting indoor basil plant with an associated database. Analyzing the hourly records of this database, in addition to visualizing photos of the plant included in live daily tweets, may provide home growers with insight that optimizes the growth of their indoor basil plant.
+
 ## Goals
 
 ## Progress Report: 10-5-20
 
 ### Current Progress
--ASDFASDFADFASDFADFASDF
 - Set up the circuit for all sensors and confirmed that they are taking measurements when exposed to physical stimuli. This includes the temperature/humidity sensor, light sensor, and soil moisture sensor. The soil moisture sensor was something we purchased externally. We also tested that this circuit works specifically in the environment of the basil plant subject we're using.
 - Wrote basic Python code to record the measurements of each sensor.
 - Connected a camera to the circuit and wrote code to take repeated photos after a time interval
