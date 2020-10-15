@@ -13,8 +13,7 @@ Our setup is described in Figure 1.
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%201.png">
 </p>
 <p align="center">
-  <b>Figure 1. Sensing and Data Broadcasting System sketch. Source: Figure Reference 8-10
-  <\b>
+  Figure 1. Sensing and Data Broadcasting System sketch. Source: Figure Reference 8-10
 </p>
 
 ## Main Goal
@@ -73,7 +72,7 @@ The importance of this factor from plant growth is explained in the next passage
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%202.png">
 </p>
 <p align="center">
-  <b>Figure 2. Light Sensor Module. Source: Figure Reference 1
+  Figure 2. Light Sensor Module. Source: Figure Reference 1
 </p>
 
 *Working principle*
@@ -83,7 +82,7 @@ This sensor works based on the concept of photoconductivity. The red tip with th
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%203.png">
 </p>
 <p align="center">
-  <b>Figure 3. Photoresistor basic composition. Source: Figure Reference 2
+  Figure 3. Photoresistor basic composition. Source: Figure Reference 2
 </p>
 
 A photoresistor is made of a material that, when exposed to light, experiences a decrease in its resistivity. This translates to a change in the voltage output of the signal (Figure 4).
@@ -92,7 +91,7 @@ A photoresistor is made of a material that, when exposed to light, experiences a
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%204.png">
 </p>
 <p align="center">
-  <b>Figure 4. Example of Voltage Output vs. Photoresistor’s Resistance. Source: Figure Reference 2
+  Figure 4. Example of Voltage Output vs. Photoresistor’s Resistance. Source: Figure Reference 2
 </p>
 
 *Specifications*
@@ -111,7 +110,7 @@ We are using the analog pin of the module, so we need to connect the module’s 
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Table%201.png">
 </p>
 <p align="center">
-  <b>Table 1. Wiring Setup for Light Sensor Module. Source: Self
+  Table 1. Wiring Setup for Light Sensor Module. Source: Self
 </p>
 
 *Applicability*
@@ -124,7 +123,7 @@ It is worth noting that this light sensor is not calibrated, and that every sens
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%205.jpg">
 </p>
 <p align="center">
-  <b>Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
+  Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
 </p>
 
 *Working principle*
@@ -140,7 +139,7 @@ We can see the inner components of the sensor in Figure 6.
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%206.jpg">
 </p>
 <p align="center">
-  <b>Figure 6. Inner structure of DHT11 Temperature and Humidity Module. Source: Figure Reference 5
+  Figure 6. Inner structure of DHT11 Temperature and Humidity Module. Source: Figure Reference 5
 </p>
 
 As we can see, the module has its own ADC, and it also saves the transfer function. Because of this, its output is already the temperature and humidity values. 
@@ -154,7 +153,7 @@ The specifications of this output can be seen in Figure 7 (DHT11 column).
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%207.png">
 </p>
 <p align="center">
-  <b>Figure 7. Output specifications for DHT11. Source: Figure Reference 5
+  Figure 7. Output specifications for DHT11. Source: Figure Reference 5
 </p>
   
 *Wiring schematic*
@@ -181,7 +180,7 @@ Since we expect the temperature and humidity to vary slowly, there is no need to
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%208.png">
 </p>
 <p align="center">
-  <b>Figure 8. Soil Moisture Sensor. Source: Figure Reference 6
+  Figure 8. Soil Moisture Sensor. Source: Figure Reference 6
 </p>
 
 *Working principle*
@@ -212,7 +211,7 @@ The wiring setup is expressed in Table 3.
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Table%203.png">
 </p>
 <p align="center">
-  <b>Table 3. Wiring Setup for Soil Moisture Sensor Module. Source: Self
+  Table 3. Wiring Setup for Soil Moisture Sensor Module. Source: Self
 </p>
 
 *Applicability*
@@ -227,7 +226,7 @@ Again, since the soil moisture is not expected to vary drastically, the sampling
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%209.png">
 </p>
 <p align="center">
-  <b>Figure 9. Camera Module. Source: Figure Reference 7
+  Figure 9. Camera Module. Source: Figure Reference 7
 </p>
 
 *Camera specifications*
@@ -251,7 +250,7 @@ Connecting the camera is very simple, as can be seen in the next animation.
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%2010.gif">
 </p>
 <p align="center">
-  <b>Figure 10. Camera module connection animation. Source: Figure Reference 7
+  Figure 10. Camera module connection animation. Source: Figure Reference 7
 </p>
 
 ## Signal conditioning and processing
@@ -279,7 +278,7 @@ We decided to store the data locally, by writing it to a .csv file. This will ma
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%205.jpg">
 </p>
 <p align="center">
-  <b>Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
+  Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
 </p>
 
 To share the data, we decided to tweet a daily summary of the data. To share this summary, we used the code in Figure 12. Instructions on how tweet using a Raspberry Pi can be found at Reference 6.
@@ -290,7 +289,7 @@ To share the data, we decided to tweet a daily summary of the data. To share thi
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%205.jpg">
 </p>
 <p align="center">
-  <b>Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
+  Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
 </p>
 
 We also used the OpenChirp IoT platform to share our data in real time, and made use of its graphing capabilities. Instructions on how to use this platform with Raspberry Pi can be found at Reference 7. The code we used to do this is shown in Figure 13.
@@ -301,7 +300,7 @@ We also used the OpenChirp IoT platform to share our data in real time, and made
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%205.jpg">
 </p>
 <p align="center">
-  <b>Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
+  Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
 </p>
 
 **Data processing**
