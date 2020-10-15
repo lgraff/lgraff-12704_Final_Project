@@ -134,7 +134,6 @@ To measure temperature, it uses a thermistor, which is a resistor that changes i
 
 We can see the inner components of the sensor in Figure 6.
 
-**INSERT FIGURE 6 WITH TITLE AND SOURCE**
 <p align="center">
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%206.jpg">
 </p>
@@ -148,7 +147,6 @@ As we can see, the module has its own ADC, and it also saves the transfer functi
 
 The specifications of this output can be seen in Figure 7 (DHT11 column).
 
-**INSERT FIGURE 7 WITH TITLE AND SOURCE**
 <p align="center">
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%207.png">
 </p>
@@ -160,7 +158,6 @@ The specifications of this output can be seen in Figure 7 (DHT11 column).
 
 The wiring setup is expressed in Table 2
 
-**INSERT TABLE 2 WITH TITLE AND SOURCE**
 <p align="center">
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Table%202.png">
 </p>
@@ -173,8 +170,6 @@ The wiring setup is expressed in Table 2
 Since we expect the temperature and humidity to vary slowly, there is no need to sample at higher rates than 1Hz. Also, the humidity and temperature accuracy are enough for our home growing purposes.
 
 **Soil Moisture Sensor Module**
-
-**INSERT FIGURE 8 WITH TITLE AND SOURCE**
 
 <p align="center">
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%208.png">
@@ -211,8 +206,6 @@ From Reference 14, we can gather the following specifications:
 
 The wiring setup is expressed in Table 3.
 
-**INSERT TABLE 3 WITH TITLE AND SOURCE**
-
 <p align="center">
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Table%203.png">
 </p>
@@ -226,8 +219,6 @@ Again, since the soil moisture is not expected to vary drastically, the sampling
 
 **Camera Module**
 
-**INSERT FIGURE 9 WITH TITLE AND SOURCE**
-
 <p align="center">
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%209.png">
 </p>
@@ -236,8 +227,6 @@ Again, since the soil moisture is not expected to vary drastically, the sampling
 </p>
 
 *Camera specifications*
-
-**INSERT CAMERA SPECIFICATIONS IMAGE OR TABLE**
 
 <p align="center">
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%2010.gif">
@@ -249,8 +238,6 @@ Again, since the soil moisture is not expected to vary drastically, the sampling
 *Wiring schematic*
 
 Connecting the camera is very simple, as can be seen in the next animation.
-
-**INSERT FIGURE 10 WITH TITLE AND SOURCE**
 
 <p align="center">
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%2010.gif">
