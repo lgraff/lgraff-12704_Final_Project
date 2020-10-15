@@ -1,4 +1,4 @@
-# 12-704 Final Project
+# 12-740 Final Project
 # Hi-Tech Basil
 
 ## Introduction
