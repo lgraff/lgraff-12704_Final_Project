@@ -421,7 +421,7 @@ Finally, with a little more time, one could add an automatic size detection algo
 
 [Reference 7]( https://www.scienceprojects.org/how-does-the-temperature-affect-the-plant-growth/#:~:text=Effect%20of%20temperature%20on%20plants&text=Temperature%20influences%20most%20plant%20processes,%2C%20transpiration%2C%20and%20respiration%20increase )
 
-[Reference 8]( https://www.sigmaelectronica.net/wp-content/uploads/2018/04/sen0193-humedad-de-suelos.pdf )
+[Reference 8]( https://kookye.com/2018/11/16/arduino-lesson-dht11-sensor/ )
 
 [Reference 9]( https://www.freva.com/wp-content/uploads/2019/06/light_sensor-416x713.jpg)
 
@@ -431,7 +431,7 @@ Finally, with a little more time, one could add an automatic size detection algo
 
 [Reference 12]( https://www.raspberrypi-spy.co.uk/2017/09/dht11-temperature-and-humidity-sensor-raspberry-pi/ )
 
-[Reference 13]( https://kookye.com/2018/11/16/arduino-lesson-dht11-sensor/ )
+[Reference 13]( https://www.sigmaelectronica.net/wp-content/uploads/2018/04/sen0193-humedad-de-suelos.pdf )
 
 [Reference 14]( https://www.switchdoc.com/2020/06/tutorial-capacitive-moisture-sensor-grove/ )
 
