@@ -193,7 +193,8 @@ The resulting transfer function is a straight line between: 1234.1234V for 0% RH
 
 *Specifications*
 
-From Reference 7, we can gather the following specifications:
+From Reference 14, we can gather the following specifications:
+
 •	Operating Voltage: 3.3 ~ 5.5 V
 •	DC Output Voltage: 0 ~ 3.0V
 •	DC Operating Current: 5mA
@@ -226,7 +227,7 @@ Again, since the soil moisture is not expected to vary drastically, the sampling
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%209.png">
 </p>
 <p align="center">
-  Figure 9. Camera Module. Source: Reference 14
+  Figure 9. Camera Module. Source: Reference 15
 </p>
 
 *Camera specifications*
@@ -237,7 +238,7 @@ Again, since the soil moisture is not expected to vary drastically, the sampling
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%2010.gif">
 </p>
 <p align="center">
-  Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
+  Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 15
 </p>
 
 *Wiring schematic*
@@ -250,7 +251,7 @@ Connecting the camera is very simple, as can be seen in the next animation.
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%2010.gif">
 </p>
 <p align="center">
-  Figure 10. Camera module connection animation. Source: Reference 14
+  Figure 10. Camera module connection animation. Source: Reference 15
 </p>
 
 ## Signal conditioning and processing
@@ -258,11 +259,11 @@ Here, we will talk about how often we took samples for each sensor, and also how
 
 **Signal conditioning within sensor modules**
 
-Temperature and Humidity sensor module circuit board: See Reference 15
+Temperature and Humidity sensor module circuit board: See Reference 16
 
-Light sensor module circuit board: See Reference 16
+Light sensor module circuit board: See Reference 17
 
-Soil Moisture sensor module circuit board: See Reference 7
+Soil Moisture sensor module circuit board: See Reference 14
 
 **Sensor Output Sample rates**
 
@@ -292,7 +293,7 @@ To share the data, we decided to tweet a daily summary of the data. To share thi
   Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
 </p>
 
-We also used the OpenChirp IoT platform to share our data in real time, and made use of its graphing capabilities. Instructions on how to use this platform with Raspberry Pi can be found at Reference 7. The code we used to do this is shown in Figure 13.
+We also used the OpenChirp IoT platform to share our data in real time, and made use of its graphing capabilities. Instructions on how to use this platform with Raspberry Pi can be found at Reference 14. The code we used to do this is shown in Figure 13.
 
 **Image with code.**
 
@@ -441,7 +442,7 @@ Finally, with a little more time, one could add an automatic size detection algo
 
 [Reference 17]( https://www.sunrom.com/p/light-sensing-module-ldr )
 ## Annex: Calibration Procedures
-***Soil Moisture Calibration Method 1 (Source: Reference 7)***
+***Soil Moisture Calibration Method 1 (Source: Reference 14)***
 
 1-	Make several measurements when the sensor is dry (in the air, not inserted in the soil). Average the values of voltage. This value will correspond to 0% RH.
 
