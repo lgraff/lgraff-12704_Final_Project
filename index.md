@@ -9,7 +9,12 @@ Growing plants indoors requires attention to a variety of environmental factors,
 ## Project Sketch
 Our setup is described in Figure 1.
 
-**INSERT FIGURE 1 WITH TITLE AND SOURCE**
+<p align="center">
+  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%201.png">
+</p>
+<p align="center">
+  <b>Figure 1. Sensing and Data Broadcasting System sketch. Source: Figure Reference 8-10
+</p>
 
 ## Main Goal
 To setup a sensing and data broadcasting system for homegrown plants.
