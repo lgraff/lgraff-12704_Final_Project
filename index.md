@@ -151,7 +151,7 @@ The specifications of this output can be seen in Figure 7 (DHT11 column).
 
 **INSERT FIGURE 7 WITH TITLE AND SOURCE**
 <p align="center">
-  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%207.jpg">
+  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%207.png">
 </p>
 <p align="center">
   <b>Figure 7. Output specifications for DHT11. Source: Figure Reference 5
@@ -163,7 +163,7 @@ The wiring setup is expressed in Table 2
 
 **INSERT TABLE 2 WITH TITLE AND SOURCE**
 <p align="center">
-  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%205.jpg">
+  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Table%202.png">
 </p>
 <p align="center">
   <b>Table 2. Wiring Setup for DHT11 Temperature and Humidity Sensor Module. Source: Self
@@ -178,7 +178,7 @@ Since we expect the temperature and humidity to vary slowly, there is no need to
 **INSERT FIGURE 8 WITH TITLE AND SOURCE**
 
 <p align="center">
-  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%208.jpg">
+  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%208.png">
 </p>
 <p align="center">
   <b>Figure 8. Soil Moisture Sensor. Source: Figure Reference 6
@@ -209,7 +209,7 @@ The wiring setup is expressed in Table 3.
 **INSERT TABLE 3 WITH TITLE AND SOURCE**
 
 <p align="center">
-  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%205.jpg">
+  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Table%203.png">
 </p>
 <p align="center">
   <b>Table 3. Wiring Setup for Soil Moisture Sensor Module. Source: Self
@@ -224,7 +224,7 @@ Again, since the soil moisture is not expected to vary drastically, the sampling
 **INSERT FIGURE 9 WITH TITLE AND SOURCE**
 
 <p align="center">
-  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%209.jpg">
+  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%209.png">
 </p>
 <p align="center">
   <b>Figure 9. Camera Module. Source: Figure Reference 7
@@ -235,7 +235,7 @@ Again, since the soil moisture is not expected to vary drastically, the sampling
 **INSERT CAMERA SPECIFICATIONS IMAGE OR TABLE**
 
 <p align="center">
-  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%2010.jpg">
+  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%2010.gif">
 </p>
 <p align="center">
   <b>Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
@@ -248,7 +248,7 @@ Connecting the camera is very simple, as can be seen in the next animation.
 **INSERT FIGURE 10 WITH TITLE AND SOURCE**
 
 <p align="center">
-  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%205.jpg">
+  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%2010.gif">
 </p>
 <p align="center">
   <b>Figure 10. Camera module connection animation. Source: Figure Reference 7
