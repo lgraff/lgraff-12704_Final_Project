@@ -498,7 +498,7 @@ We observe a nonlinear relationship between voltage and Lux. We then transform t
 The transformed scale exposes a relatively linear relationship between log(voltage) and log(lux). We perform a least squares linear fit and find the following relationship: 
 
 <p align="center">
-  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/equation.PNG">
+  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/eqnlight.PNG">
 </p>
 
 Using this relationship, we can convert between the sensor’s voltage value and a light intensity value that will be displayed to users.
