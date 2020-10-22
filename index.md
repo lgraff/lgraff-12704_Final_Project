@@ -1,6 +1,7 @@
 # 12-740 Final Project
 # Hi-Tech Basil
 
+[Video link](https://vimeo.com/470846260)
 
 # Introduction
 In this project, we describe how to set up a sensing and data broadcasting system for any homegrown plant. The data is captured by the Raspberry Pi and sensors, and made available through twitter, an IoT platform, and a .csv file, for people to use. If enough people do the same, we would then be able to have a very useful database to find the optimal ranges for all the factors that promote growth of plants.
