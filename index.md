@@ -236,83 +236,35 @@ Light sensor module circuit board: See Reference 17
 
 Soil Moisture sensor module circuit board: See Reference 14
 
-**Sensor Output Sample rates**
+**Sensor Output Sample Rates**
 
-The sample rate for all sensors (all except the camera) was one sample per hour, or 0.0167 Hz. This is more than enough to capture the relevant fluctuations of the environmental phenomena of interest. For the camera, we took a picture every 24 hours. We chose a much lower sampling rate for the photos to avoid memory storage issues with the larger images. Still, these daily images were sufficient in allowing us to monitor the state of the basil plant due to the slow growth process.
+The sample rate for all sensors (except the camera) was one sample per hour, or 0.0167 Hz. This is more than enough to capture the relevant fluctuations of the environmental phenomena of interest. For the camera, we took a picture every 24 hours. We chose a much lower sampling rate for the photos to avoid memory storage issues with the larger images. Still, these daily images were sufficient in allowing us to monitor the state of the basil plant due to the slow growth process.
 
 **Data Storage and IoT integration**
 
-We chose to store the data locally by writing it to a .csv file. This file includes a row for every timestamp containing any measurement, and a column for every type of raw measurement taken. As such, there are 6 columns: timestamp, temperature, humidity, soil moisture, light, and average green intensity. It must be noted that the green intensity column contains null values unless the timestamp represents the end of a full 24 hour period. The .csv format will facilitate usage of the data by others if we decided to upload file elsewhere. Furthermore, if others decided to embark on the same Hi Tech Plant project with their own indoor plant, this file format would enable simple data merges. This would subsequently provide resources for the plant growing community to start quantitatively analyzing best practices concerning environmental conditions.
+We chose to store the data locally by writing it to a .csv file. This file includes a row for every timestamp containing any measurement, and a column for every type of raw measurement taken. As such, there are 6 columns: timestamp, temperature, humidity, soil moisture, light, and average green intensity. It must be noted that the green intensity column contains null values unless the timestamp represents the end of a full 24 hour period. The .csv format will facilitate usage of the data by others if we decided to upload file elsewhere. Furthermore, if others decided to embark on the same Hi Tech Plant project with their own indoor plant, this file format would enable simple data merges. This would subsequently provide resources for the plant growing community to start quantitatively analyzing best practices concerning environmental conditions. The pictures taken by the camera at the end of each period were also stored in a local folder. 
 
-The pictures taken by the camera were also stored in a local folder. The code to do this is shown in Figure 11.
+To share the data, we decided to tweet a daily summary of the data hosted by the Twitter handle @smart_basil. This includes the average temperature, humidity, soil moisture, and light value of the past 24 hours, as well as the average green pixel intensity of the photo taken at the end of the period. Users may scroll through the Twitter feed for a visual understanding of how the basil plant looks every 24 hours, associated with a summary of the average environmental parameters the plant experienced. Instructions on how to tweet using a Raspberry Pi can be found at Reference 18.
 
-**Image with code.**
-
-<p align="center">
-  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%205.jpg">
-</p>
-<p align="center">
-  Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
-</p>
-
-To share the data, we decided to tweet a daily summary of the data. This includes the average temperature, humidity, soil moisture, and light value of the past 24 hours, as well as the average green pixel intensity of the photo taken at the end of the period. To share this summary, we used the code in Figure 12. Instructions on how to tweet using a Raspberry Pi can be found at Reference 18.
-
-**Image with code.**
-
-<p align="center">
-  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%205.jpg">
-</p>
-<p align="center">
-  Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
-</p>
-
-We also used the OpenChirp IoT platform to share our data in real time, mkaing use of its graphing capabilities. Users can check this platform to see time series graphs of the raw measurements in real time. This can be of particular use for plant growers who ha  Instructions on how to use this platform with Raspberry Pi can be found at Reference 19. The code we used to do this is shown in Figure 13.
-
-**Image with code.**
-
-<p align="center">
-  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%205.jpg">
-</p>
-<p align="center">
-  Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
-</p>
+We also used the OpenChirp IoT platform to share our data in real time, making use of its graphing capabilities. Users can check this platform to see time series graphs of the raw measurements in real time. This can be of use for plant growers who need quick updates on the status of the environmental conditions so that they can make required changes. For example, one might decide to water their plant while simultaneously monitoring the soil moisture levels on OpenChirp in order to ensure that they do not exceed the plant's water tolerance. Instructions on how to use this platform with Raspberry Pi can be found at Reference 19. 
 
 **Data processing**
 
-Here, we explain how we processed the signals sampled by the sensors:
+After sampling the signals, we conducted basic data processing to obtain the necessary information.
 
-*Temperature and humidity sensor*: this sensor outputs temperature and humidity values, and so there is not much data processing necessary. The only problem we encountered was that it could give erroneous zero measures often. We decided to store the erroneous values as “NaN” entries, and let them be filtered by prospective data analysts. For the twitter summary, since we decided to use the average daily temperature and humidity, we used a special average function that did not include “Nan” values.
+*Temperature and humidity sensor*: Since this sensor outputs the digital temperature and humidity values, there is not much data processing necessary. The only problem we encountered was the common appearance of erroneous zero measures. We decided to store the erroneous values as “NaN” entries in our .csv files so that they could be subsequently filtered by analysts of the data. For the daily average Twitter summary, we used the specific average function that excluded “NaN” values.
 
-*Soil moisture sensor*: after calibration (Soil Moisture Sensor Calibration Method 1 in Annex), the transfer function was included in the main code. The sampled values were stored, and a daily average was tweeted.
+*Soil moisture sensor*: We calibrated the sensor (see Soil Moisture Sensor Calibration Method 1 in the Appendix) to find the transfer function. The sampled values, which were output in terms of voltage, were then appropriately converted to moisture percentages. A daily average of these percentages was used in the tweet.
 
-*Light sensor*: after the calibration (Light Sensor Calibration in Annex), the transfer function was included in the main code. The sampled values were stored, and a daily average was tweeted.
+*Light sensor*: We calibrated the sensor (see Light Sensor Calibration Procedure in the Appendix) to find the transfer function. The sampled values, which were output in terms of voltage, were then appropriately converted to lux values. A daily average of these lux values was used in the tweet.
 
-*Camera*: to process the daily picture, we first configured the camera settings to take consistent pictures (instructions on how to do this can be found in Reference 15). We then extracted the RBG values from the picture, and cropped the matrix so as to fit the plant with as little background as possible. Then, the average value of the Green matrix was used as the “Green Vitality” indicator, and this was tweeted.
-
-The code we used for data processing is shown in Figure 14.
-
-**Image with code.**
-
-<p align="center">
-  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%205.jpg">
-</p>
-<p align="center">
-  Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
-</p>
+*Camera*: To process the daily picture, we first configured the camera settings to take consistent pictures according to the method offered in Reference 15. This included fixing the camera exposure gains, white balance, brightness level, and contrast level. For recordkeeping, we also added a timestamp on the photo. To avoid background color noise, we cropped the image so as to only include the basil plant. We then extracted the RGB values for each pixel in the cropped image and took an average of the green values. In our daily tweet and .csv file, we termed this value "Average Green Intensity." 
 
 ## Final Setup
-**Final Code:** the code we used, with comments, can be seen in Figure 15.
 
-**Image with code.**
+Our final code called "combined_sensors.py" can be found in the Github repository.
 
-<p align="center">
-  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%205.jpg">
-</p>
-<p align="center">
-  Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
-</p>
-
-**Physical Setup:** the setup sketch in Figure 1 was materialized as can be seen in Figure 16.
+**Physical Setup:** the setup sketch in Figure 1 was materialized as can be seen in Figure 11.
 
 **Photo of our setup**
 
@@ -320,13 +272,13 @@ The code we used for data processing is shown in Figure 14.
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%205.jpg">
 </p>
 <p align="center">
-  Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
+  Figure 11. Physical setup
 </p>
 
 ## Experiments and Results
 After running our code to collect data for XX days, we got the following results:
 
-**CSV Output file:** the .csv file contained all the data points, as expected, and the structure lookes like Figure 17.
+**CSV Output file:** The .csv file contained all the data points, as expected, with the structure shown in Figure 12.
 
 **Screencaps of .csv data**
 
@@ -334,10 +286,10 @@ After running our code to collect data for XX days, we got the following results
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%205.jpg">
 </p>
 <p align="center">
-  Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
+  Figure 12. Sample output of .csv file
 </p>
 
-**Twitter:** our program successfully tweeted our results as intended. A tweet can be seen in Figure 18.
+**Twitter:** Our program successfully tweeted an average summary of the environmental parameters of the past 24 hours. A representative tweet from the username @smart_basil can be seen in Figure 13.
 
 **Screencaps of Twitter**
 
@@ -345,10 +297,10 @@ After running our code to collect data for XX days, we got the following results
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%205.jpg">
 </p>
 <p align="center">
-  Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
+  Figure 13. Sample tweet from @smart_basil
 </p>
 
-**Open Chirp:** our program successfully connected live to the OpenChirp IoT platform. The resulting graphs can be seen in Figure 19.
+**Open Chirp:** Our program successfully connected live to the OpenChirp IoT platform. A sample of the resulting graphs can be seen in Figure 14.
 
 **Screencaps of OpenChirp**
 
@@ -356,7 +308,7 @@ After running our code to collect data for XX days, we got the following results
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%205.jpg">
 </p>
 <p align="center">
-  Figure 5. DHT11 Temperature and Humidity Sensor Module. Source: Figure Reference 4
+  Figure 14. Sample time series graphs from OpenChirp
 </p>
 
 *DISCUSS OPEN CHIRP RESLTS*
@@ -366,16 +318,19 @@ After running our code to collect data for XX days, we got the following results
 
 ## Discussion
 
-**What went good?**
+**Contributions**
+
+Hi Tech Basil, which was motivated by the need to provide people with more precise data regarding the parameters that stimulate basil growth, served as a successful proof of concept for a sensing and data broadcasting system for a homegrown plant. We showed that users can monitor and display environmental conditions and basil performance via three different output forms: 1) flat .csv file, 2) daily summary tweet, and 3) real-time visualizations of measurements in the IoT platform OpenChirp. Each output form has a specific value. While the .csv file lends itself to more in-depth data analysis by allowing for different aggregations, OpenChirp is useful in the sense that users can instantly tune the ambient environmental parameters as necessary upon quick measurement readings. The value in Twitter is its visual representation of the plant, since users may prefer to see the actual photo alongside the derived proxy of plant growth, in addition to the quick-read stream of daily summary tweets and photos. 
+The ultimate idea is that, if enough users participate in the data collection process, we can start to crowd source information pertaining to the ideal growing conditions for a basil plant.
 
 The set of sensors provided and purchased worked really well and were really easy to install. They were also inexpensive enough that anyone could have this same setup. Also, user friendly IoT platforms and libraries like Twython allow for easy sharing and remote monitoring, which makes the idea of building massive databases of these experiments feasible. Overall, these results are compatible with our initial goals.
 
-**What can be improved?**
+**Limitations**
 
 There are some aspects that need improvement. For example, the green vitality index is only of use as a relative measure of the state of the plant. It will only become useful if we have many data points (i.e. basil experiments like this) to compare with, and they will need to have similar camera setups. Also, measuring light intensity is not really useful in itself, but it needs to be converted to the number of hours of sunlight exposure, and maybe the quality of the sunlight received in that period.
 Another important limitation of this experiment is the fact that the soil we used has not been characterized. This falls out of the scope of the project, but the soil organic content, soil texture and nutrient content are major factors that will affect plant growth. Ideally, instructions on how to characterize the soil should be added by some specialist, and this way add new dimensions to our datapoints.
 
-**Ideas for further projects**
+**Future Work**
 
 Some features that would be interesting to add would be actuators like a water pump that keeps the soil moisture level at a certain value range, and an air humidifier to control the ambient moisture. Also, setting up alerts for the home owner when levels get critical (e.g. when the green vitality index falls below a threshold, or soil moisture is too low) would be a good idea.
 Finally, with a little more time, one could add an automatic size detection algorithm to the image processing part, to monitor plant growth in real time.
@@ -409,7 +364,7 @@ Finally, with a little more time, one could add an automatic size detection algo
 
 [Reference 14]( https://www.sigmaelectronica.net/wp-content/uploads/2018/04/sen0193-humedad-de-suelos.pdf )
 
-[Reference 15]( https://projects.raspberrypi.org/en/projects/getting-started-with-picamera )
+[Reference 15](https://picamera.readthedocs.io/en/release-1.12/recipes1.html)
 
 [Reference 16](https://components101.com/sites/default/files/component_datasheet/DHT11-Temperature-Sensor.pdf )
 
