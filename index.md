@@ -297,26 +297,26 @@ After running our code to collect data for XX days, we got the following results
 **Screencaps of Twitter**
 
 <p align="center">
-  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%205.jpg">
+  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Twitter_screenshot.png">
 </p>
 <p align="center">
   Figure 13. Sample tweet from @smart_basil
 </p>
 
+Each photo has the timestamp attached, and the caption includes average humidity, temperature, soil moisture, and light. Users can scroll through successive tweets for a visual representation of the basil's growth over time. By examining the associated caption, they can also get a hasty sense of the environmental conditions that the basil plant prefers. For a more quantitative view, they can analyze the data of the .csv file. A preliminary review of @smart_basil's Twitter page reveals that the plant performs better in better lighting condtions, though our initial results are certainly skewed by low-brightness photos. We can also make a tentative connection between temperature and soil moisture levels; as temperature increases, the soil dries out more, so it is imperative to stay vigilant of the soil moisture levels in warmer weather.
+ 
 **Open Chirp:** Our program successfully connected live to the OpenChirp IoT platform. A sample of the resulting graphs can be seen in Figure 14.
 
 **Screencaps of OpenChirp**
 
 <p align="center">
-  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%205.jpg">
+  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/OpenChirp_screenshot.png">
 </p>
 <p align="center">
   Figure 14. Sample time series graphs from OpenChirp
 </p>
 
-*DISCUSS OPEN CHIRP RESLTS*
-
-
+The OpenChirp minute-by-minute time series visualizations of the raw measurements show users how the environmental parameters update in real time. These graphs are valuable because they allow users to monitor conditions and make adjustments to the plant's ambient conditions as necessary. For example, we can see that the beginning of the measurement period was marked by low light intensity levels. This aligns with our observations that the days were cloudy. In these cases, users may choose to turn on a UV plant light to simulate sunlgiht conditions. In addition, we see soil moisture levels drop at the end of the period, which we attribute to warmer weather that may have resulted in more water evaporation. Upon seeing this, the user may be prompted to water their plants in order to avoid wilting.
 
 
 ## Discussion
