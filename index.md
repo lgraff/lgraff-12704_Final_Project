@@ -14,7 +14,7 @@ Our setup is described in Figure 1.
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%201.png">
 </p>
 <p align="center">
-  Figure 1. Sensing and Data Broadcasting System sketch. Source: Figure Reference 1-3
+  Figure 1. Sensing and Data Broadcasting System sketch. Sources for figures: References 1,2,3
 </p>
 
 ## Main Goal
@@ -35,9 +35,10 @@ The physical phenomena of interest include soil moisture, temperature, humidity,
 
 **Ambient temperature:** The ambient temperature simply describes the temperature of area directly surrounding the plant. This factor affects many metabolic processes that plants undergo while growing. While photosynthesis, transpiration, and respiration typically accelerate at higher temperatures, the temperatures required for the germination and flowering processes depend on the individual plant. For this reason, we see the existence of seasonal crops, or those that can only survive during certain times of the year (Reference 7).
 
-**Ambient light intensity:** Light intensity, measured in units of lux, is formally defined as the amount of "light that is emitted in unit time per unit solid angle" (Reference 23). Measuring light intensity near the plant tells us the amount of sunlight that the plant receives. Sunlight is vital for plants, as it enables photosynthesis. The amount of sunlight required for this process, however, varies by plant (Reference 24).
+**Ambient light intensity:** Light intensity, measured in units of lux, is formally defined as the amount of "light that is emitted in unit time per unit solid angle" (Reference 23). Measuring light intensity near the plant tells us the amount of sunlight that the plant receives. Sunlight is vital for plants, as it enables photosynthesis. The amount of sunlight required for this process, however, varies by plant (Reference 24). While a basil grower would be more interested in knowing the hours of sunlight exposure for their plant, the average light intensity will suffice for this purpose of this project. 
 
 **Intensity of green color:** The average green pixel intensity from the image of each plant is used as a crude proxy of plant growth. By capturing the quantity of green in an image, we can better understand the vitality and general state of the basil we are using as a test subject. The inherent assumption is that a healthier basil plant will be greener. While this metric is not perfect, we think it is a suitable proxy, particularly for basil. From our prior qualitative experiences with indoor basil harvesting, a more vibrant has bushier leaves (hence more green), while the leaves of a decaying basil plant will wilt (hence less green). We recognize that plant height could also be representative of plant growth, but we believe that green pixel intensity better captures the full plant in all dimenions. 
+
 ## Sensors Review
 **Photosensitive Light Sensor Module**
 
@@ -327,7 +328,7 @@ The set of sensors provided and purchased worked really well and were really eas
 
 **Limitations**
 
-There are some aspects that need improvement. For example, the green vitality index is only of use as a relative measure of the state of the plant. It will only become useful if we have many data points (i.e. basil experiments like this) to compare with, and they will need to have similar camera setups. Also, measuring light intensity is not really useful in itself, but it needs to be converted to the number of hours of sunlight exposure, and maybe the quality of the sunlight received in that period.
+Aspects of the project that need improvement primarily concern the form and utility of the measurements. First, from a user perspective, users may prefer to know the number of hours and quality of sunlight exposure, as opposed to the actual value of light intensity during the period. Given that users can only control plant placement and the switch of a UV plant light, this would be a more practical measurement. Second, the average green intensity measure is only of use as a relative measure of the state of the plant, and it is also highly contingent on consistency of images. We can only characterize this metric if we have many comparison data points (i.e. several Hi Tech Basil experiments) coming from the same camera setup. One issue we had with our initial tweets was __ 
 Another important limitation of this experiment is the fact that the soil we used has not been characterized. This falls out of the scope of the project, but the soil organic content, soil texture and nutrient content are major factors that will affect plant growth. Ideally, instructions on how to characterize the soil should be added by some specialist, and this way add new dimensions to our datapoints.
 
 **Future Work**
@@ -415,9 +416,9 @@ The resulting equation when we performed this method was the following:
 
 7-	The transfer function can be either a polynomial fit to the points, or a direct linear interpolation between the points.
 
-***Light Sensor Calibration Procedure (Source: Reference 21)***
+***Light Sensor Calibration Procedure***
 
-Calibrating the light sensor involved comparing voltage readings from the sensor with light intensity measurements taken from a Lux meter. To obtain a Lux meter, we downloaded a smartphone app called “LUX Light Meter FREE”, which detects light intensity via the phone’s camera. We then placed the light sensor and phone side-by-side in a cardboard box, folding the sides of the box so that light was only able to enter the box through ¼ of the top surface. The purpose of this setup was to ensure that we only captured the light directly hitting the surface of the sensor. This is in accordance with the recommendation of Reference[X], which suggests that the light sensor and light source should be perpendicular to each other. We recognize, however, that our process was not entirely accurate since the top surface was large enough to allow light to enter diagonally.
+Calibrating the light sensor involved comparing voltage readings from the sensor with light intensity measurements taken from a Lux meter. To obtain a Lux meter, we downloaded a smartphone app called “LUX Light Meter FREE”, which detects light intensity via the phone’s camera. We then placed the light sensor and phone side-by-side in a cardboard box, folding the sides of the box so that light was only able to enter the box through ¼ of the top surface. The purpose of this setup was to ensure that we only captured the light directly hitting the surface of the sensor. This is in accordance with the recommendation of Reference 21, which suggests that the light sensor and light source should be perpendicular to each other. We recognize, however, that our process was not entirely accurate since the top surface was large enough to allow light to enter diagonally.
 
 Once our setup was complete, we took 14 different measurements of voltage of Lux. The box was placed in different locations and another phone was used to directly shine bright lights on the sensors. These points were then plotted in Figure A below: 
 
@@ -438,6 +439,8 @@ The transformed scale exposes a relatively linear relationship between log(volta
 </p>
 
 Using this relationship, we can convert between the sensor’s voltage value and a light intensity value that will be displayed to users.
+
+
 
 
 ### Current Progress
