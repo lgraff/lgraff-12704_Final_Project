@@ -4,9 +4,9 @@
 [Video link](https://vimeo.com/470846260)
 
 # Introduction
-In this project, we describe how to set up a sensing and data broadcasting system for a homegrown basil plant. The data is captured by a Raspberry Pi and various sensors, and made available through Twitter, the IoT platform OpenChirp, and a .csv file. If enough people create this simple at-home system, we could crowdsource a useful database that offers insight into the optimal ranges for environmental factors that promote plant growth.
+In this project, we describe how to set up a sensing and data broadcasting system for any homegrown plant. The data is captured by the Raspberry Pi and sensors, and made available through twitter, an IoT platform, and a .csv file, for people to use. If enough people do the same, we would then be able to have a very useful database to find the optimal ranges for all the factors that promote growth of plants.
 ## Motivation
-Growing plants indoors requires attention to a variety of environmental factors, including temperature, humidity, light, and soil moisture levels. Regulation of these parameters can be difficult, especially when there is sparse data concerning ideal growing conditions for individual plants. Specifically for the basil herb, a quick online search will reveal several different choices that an individual may make when tuning the ambient environmental factors. Notably, however, most sources are primarily anecdotal; homegrowers have yet to document the environmental conditions and associated growth patterns of their plants over time. To address these needs, we propose Hi-Tech Basil: a tweeting indoor basil plant with an associated database and IoT capabilities. Analyzing the hourly records of this database, in addition to visualizing photos of the plant included in live daily tweets, may provide home growers with insight that optimizes the growth of their indoor plants.
+Growing plants indoors requires attention to a variety of environmental factors, including temperature, humidity, light, and soil moisture levels. Regulation of these parameters can be difficult, especially when there is sparse data concerning ideal growing conditions for individual plants. Specifically for the basil herb, a quick online search will reveal several different choices that an individual may make when tuning the ambient environmental factors. Notably, however, most sources are primarily anecdotal; homegrowers have yet to document the environmental conditions and associated growth patterns of their plants over time. To address these needs, we propose Hi-Tech Basil: a tweeting indoor basil plant with an associated database, and IoT capabilities. Analyzing the hourly records of this database, in addition to visualizing photos of the plant included in live daily tweets, may provide home growers with insight that optimizes the growth of their indoor plants.
 ## Project Sketch
 Our setup is described in Figure 1.
 
@@ -18,26 +18,54 @@ Our setup is described in Figure 1.
 </p>
 
 ## Main Goal
-* Create a sensing and data broadcasting system for homegrown plants so that users may extract information pertaining to the conditions necessary for plant growth
+To setup a sensing and data broadcasting system for homegrown plants.
 ## Specific Goals
-*	Create a sensing system that measures ambient humidity and temperature, ambient light intensity, soil moisture, and takes a still photo of the plant at the end of each growth period.
+*	Create a sensing system that measures ambient humidity and temperature, ambient light intensity, soil moisture, and also takes a picture of the plant every day.
 *	Create a growth status index that can be automatically extracted from the picture taken.
-*	Store the collected data in a .csv file and automatically tweet a summary of the daily surveyed data.
+*	Store the collected data on a .csv file, and automatically tweet a summary of the daily surveyed data.
 *	Integrate the setup to an IoT platform.
 *	Show feasibility of the creation of a massive database by combining experiments by many individuals.
 # Methodology
 ## Phenomena of Interest
-The physical phenomena of interest include soil moisture, temperature, humidity, and light. Since all the phenomena of our experiments vary slowly in time, they can all be considered static in nature.
+Here, we will establish what exacly are the physical phenomena we are measuring, and why they are of interest. Since all the phenomena here vary very slowly in time, they can all be considered static in nature.
 
-**Soil moisture:** Soil moisture percentage refers to the amount of water available in the soil. It can be measured as a ratio of volume of water per unit volume of soil, or as a ratio of water mass per unit mass of soil. We opt for the second measure because it is easier to measure, and so the calibration of the soil moisture sensor is easy to conduct at home. According to Reference 4, the water in soil is important for plant growth because it acts as a carrier of nutrients, helps in the photosynthesis and metabolic process of plants, and moderates soil temperature.
+**Soil moisture:** this is basically the amount of water available in the soil. It can be measured as a ratio of volume of water per unit volume of soil, or as a ratio of water mass per unit mass of soil. We opt for the second measure because it is easier to measure, and so the calibration of the soil moisture sensor is easy to do at home. The importance of this variable for plant growth is widely known. Here, I quote a passage from Reference 4:
 
-**Ambient humidity:** Ambient humidity is roughly defined as the amount of water in the air, relative to the maximum amount of water the air can hold at a given temperature. The strict definition is “the ratio of the actual water vapour pressure to the saturation water vapour pressure at the prevailing temperature" (Reference 5). The importance of this factor for plant growth relates to the photosynthesis and transpiration processes. In a dry environment, the plant tries to retain its water by closing its stomata, but in doing so, the plant simultaneously stifles its ability to intake CO2. In a highly humid environment, the plant cannot evaporate water at a fast enough rate. Consequently, an appropriate humidity level allows the plant to both photosynthesize and transpire so that it may grow (Reference 22).
+*“…Importance of Soil Water:*
 
-**Ambient temperature:** The ambient temperature simply describes the temperature of area directly surrounding the plant. This factor affects many metabolic processes that plants undergo while growing. While photosynthesis, transpiration, and respiration typically accelerate at higher temperatures, the temperatures required for the germination and flowering processes depend on the individual plant. For this reason, we see the existence of seasonal crops, or those that can only survive during certain times of the year (Reference 7).
+*-Soil water serves as a solvent and carrier of food nutrients for plant growth*
 
-**Ambient light intensity:** Light intensity, measured in units of lux, is formally defined as the amount of "light that is emitted in unit time per unit solid angle" (Reference 23). Measuring light intensity near the plant tells us the amount of sunlight that the plant receives. Sunlight is vital for plants, as it enables photosynthesis. The amount of sunlight required for this process, however, varies by plant (Reference 24).
+*-Yield of crop is more often determined by the amount of water available rather than the deficiency of other food nutrients*
 
-**Intensity of green color:** The average green pixel intensity from the image of each plant is used as a crude proxy of plant growth. By capturing the quantity of green in an image, we can better understand the vitality and general state of the basil we are using as a test subject. The inherent assumption is that a healthier basil plant will be greener. While this metric is not perfect, we think it is a suitable proxy, particularly for basil. From our prior qualitative experiences with indoor basil harvesting, a more vibrant has bushier leaves (hence more green), while the leaves of a decaying basil plant will wilt (hence less green). We recognize that plant height could also be representative of plant growth, but we believe that green pixel intensity better captures the full plant in all dimenions. 
+*-Soil water acts as a nutrient itself*
+
+*-Soil water regulates soil temperature*
+
+*-Soil forming processes and weathering depend on water*
+
+*-Microorganisms require water for their metabolic activities*
+
+*-Soil water helps in chemical and biological activities of soil*
+
+*-It is a principal constituent of the growing plant*
+
+*-Water is essential for photosynthesis…”*
+
+**Ambient humidity:** roughly defined as the amount of water in the air, relative to the maximum amount of water the air can hold at a given temperature. The strict definition is taken from Reference 5:
+
+*“…The relative humidity (RH) is the ratio of the actual water vapour pressure to the saturation water vapour pressure at the prevailing temperature. For example – if a cubic metre can hold 100ml of water at 20 degrees centigrade (273 K) and it does contain 100ml then it is said to be 100% RH. If the same cubic metre of air at the same temperature only contains 50mls of water then it is described as 50% RH…”*
+
+The importance of this factor from plant growth is explained in the next passage, taken from Reference 6:
+
+*“…If your grow room humidity is low (dry), it causes the plants to transpire much more rapidly than in a higher humidity environment. When this happens, the leaves become flaccid and begin to wilt, and over a longer period of time the plant will close its stomata, and reduce the flow of water out of the plant. This is very effective at stopping water loss, but unfortunately, it also reduces the intake of CO2. Without an adequate supply of CO2, the cells will begin to die, and the plant will look tired and ill…”*
+
+**Ambient temperature:** this is just the temperature of the room in which the plant is. This factor affects most plant processes. The next passage is taken from Reference 7:
+
+*“…Temperature influences most plant processes, including photosynthesis, transpiration, respiration, germination, and flowering. As temperature increases (up to a point), photosynthesis, transpiration, and respiration increase…”*
+
+**Ambient light intensity:** measuring light intensity near the plant will give us the amount of sunlight that the plant receives. Sunlight is very important for plants, as it enables photosynthesis. Different plants require different amounts of sunlight, for optimal growth. 
+
+**Intensity of green color:** this is a proxy for the growth of the plant. By capturing how much green there is in a picture of the plant, we can capture its vitality, and use this as an indicator of the general state of the plant. Of course, this is just a proxy measure, and will be accompanied by actual pictures of the plant. 
 ## Sensors Review
 **Photosensitive Light Sensor Module**
 
@@ -88,7 +116,7 @@ We are using the analog pin of the module, so we need to connect the module’s 
 
 *Applicability*
 
-We describe our calibration process of the light sensor in the Appendix. The light intensity output of the sensor will serve as a broad indicator of how many hours of sunlight the plant has received. The sampling rate is practically irrelevant, since we will be recording measurements every minute, and the signal is relatively static within this time frame.
+It is worth noting that this light sensor is not calibrated, and that every sensor, even of the same brand and batch, is likely to output different values for the same period. Hence, this should only be used as an indicator of how much hours of sunlight the plant has received, rather than trying to quantify the actual value of light intensity. The sampling rate is practically irrelevant, since we will be measuring every minute, or every hour.
 
 **DHT11 Temperature and Humidity Sensor Module**
 
@@ -114,7 +142,7 @@ We can see the inner components of the sensor in Figure 6.
   Figure 6. Inner structure of DHT11 Temperature and Humidity Module. Source: Reference 12
 </p>
 
-As we can see, the module has its own ADC, and it also saves the transfer function. Because of this, its output is already the form of temperature and humidity values. 
+As we can see, the module has its own ADC, and it also saves the transfer function. Because of this, its output is already the temperature and humidity values. 
 
 *Specifications*
 
@@ -140,7 +168,7 @@ The wiring setup is expressed in Table 2
 
 *Applicability*
 
-Since we expect the temperature and humidity to vary slowly, there is no need to sample at higher rates than 1Hz. Also, the humidity and temperature accuracy are sufficient for our home growing purposes.
+Since we expect the temperature and humidity to vary slowly, there is no need to sample at higher rates than 1Hz. Also, the humidity and temperature accuracy are enough for our home growing purposes.
 
 **Soil Moisture Sensor Module**
 
@@ -153,11 +181,11 @@ Since we expect the temperature and humidity to vary slowly, there is no need to
 
 *Working principle*
 
-This sensor works in the same way as the humidity sensor. It consists of two electrodes embedded in a dielectric. The moisture in the soil changes the conductivity of the dielectric, and thus the output signal.
+This sensor works in exactly the same way as the humidity sensor. It consists of two electrodes embedded in a dielectric. The moisture in the soil changes the conductivity of the dielectric, and thus the output signal.
 
-This sensor does not come with a built-in transfer function, and it outputs the voltage of the signal. We calibrated the sensor according to the Soil Moisture Sensor Calibration Method 1 in the Appendix. For more representative results, one should use Method 2. However, since we were not able to collect a large enough soil sample, we opted for Method 1.
+This sensor does not come with a built-in transfer function, and it outputs the voltage of the signal. We need to calibrate this sensor with a sample of the soil we intend to work with. To do this, we used Soil Moisture Sensor Calibration Method 1 in the Annex. For more representative results, one should use Method 2. However, due to not being able to collect a large enough soil sample, we opted for Method 1.
 
-The resulting transfer function is a straight line following the equation in the Appendix (see Soil Moisture Sensor Calibration Method 1).
+The resulting transfer function is a straight line following the equation in the Annex (see Soil Moisture Sensor Calibration Method 1)
 
 *Specifications*
 
@@ -188,7 +216,7 @@ The wiring setup is expressed in Table 3.
 
 *Applicability*
 
-Since the soil moisture is not expected to vary drastically, the sampling rate of this device is sufficient. Also, with proper calibration, the results should be accurate enough such that the data is usable for later analysis. The sensor has a sufficient sampling speed capacity, since we are going to be taking samples every minute, or every hour.
+Again, since the soil moisture is not expected to vary drastically, the sampling rate of this device is more than enough. Also, with proper calibration, the results should be good enough for the data to be usable for later analysis. The sensor if more than enough in terms of sampling speed capacity, since we are going to be taking samples every minute, or every hour.
 
 **Camera Module**
 
@@ -226,7 +254,7 @@ Connecting the camera is very simple, as can be seen in the next animation.
 </p>
 
 ## Signal conditioning and processing
-In this section, we describe our sampling rates, data processing steps, and data sharing capabilities. It is important to note that all the sensors we used have some kind of signal conditioning, and we will provide resources that show the structure of their circuit boards.
+Here, we will talk about how often we took samples for each sensor, and also how we decided to process and share the data. It is important to note that all the sensors we used have some kind of signal conditioning, and we will provide resources that show the structure of their circuit boards.
 
 **Signal conditioning within sensor modules**
 
@@ -238,7 +266,7 @@ Soil Moisture sensor module circuit board: See Reference 14
 
 **Sensor Output Sample rates**
 
-The sample rate for all sensors (all except the camera) was one sample per hour, or 0.0167 Hz. This is enough to capture the relevant fluctuations of the environmental phenomena of interest. For the camera, we took a picture every 24 hours. We chose a much lower sampling rate for the photos to avoid memory storage issues with the larger images. Still, these daily images were sufficient in allowing us to monitor the state of the basil plant due to the slow growth process.
+The sample rate for the outputs that the sensors give (all except the camera) was one sample per hour. This is enough to capture the relevant fluctuations of the phenomena of interest. For the camera, we took a picture every 24 hs. This is also enough to monitor the state of the plant.
 
 **Data Storage and IoT integration**
 
@@ -385,23 +413,41 @@ Finally, with a little more time, one could add an automatic size detection algo
 
 [Reference 3]( https://www.shutterstock.com/search/camera+side+view)
 
-[Reference 4]( http://ieassa.org/en/soil-moisture-importance/)
+Reference 4
 
-[Reference 5]( https://www.nfsa.gov.au/preservation/preservation-glossary/relative-humidity-rh)
+Soil moisture importance. (2013, December 24). IEASSA. Retrieved October 22, 2020, from http://ieassa.org/en/soil-moisture-importance/
 
-[Reference 6](https://gardenculturemagazine.com/grow-room-humidity-important/#:~:text=If%20your%20grow%20room%20humidity,water%20out%20of%20the%20plant.)
+Reference 5
 
-[Reference 7]( https://www.scienceprojects.org/how-does-the-temperature-affect-the-plant-growth/#:~:text=Effect%20of%20temperature%20on%20plants&text=Temperature%20influences%20most%20plant%20processes,%2C%20transpiration%2C%20and%20respiration%20increase )
+Relative humidity (RH). (n.d.). NFSA. Retrieved October 22, 2020, from https://www.nfsa.gov.au/preservation/preservation-glossary/relative-humidity-rh
 
-[Reference 8](https://www.amazon.es/M%C3%B3dulo-Fotosensible-detecci%C3%B3n-Fotorresistencia-Arduino/dp/B00VUQ6CU0)
+Reference 6
 
-[Reference 9]( https://kookye.com/2018/11/16/arduino-lesson-sound-detection-sensor-2/)
+Brookes, S. (2016, December 26). Why is Grow Room Humidity Important? Garden Culture Magazine. Retrieved October 22, 2020, from https://gardenculturemagazine.com/grow-room-humidity-important/#:~:text=If%20your%20grow%20room%20humidity,water%20out%20of%20the%20plant [Here](https://gardenculturemagazine.com/grow-room-humidity-important/#:~:text=If%20your%20grow%20room%20humidity,water%20out%20of%20the%20plant.)
 
-[Reference 10]( http://www.uugear.com/portfolio/using-light-sensor-module-with-raspberry-pi/)
+Reference 7
 
-[Reference 11]( https://www.raspberrypi-spy.co.uk/2017/09/dht11-temperature-and-humidity-sensor-raspberry-pi/ )
+How does the temperature affect the plant growth? (n.d.). Science Projects. Retrieved October 22, 2020, from https://www.scienceprojects.org/how-does-the-temperature-affect-the-plant-growth/#:~:text=Effect%20of%20temperature%20on%20plants&text=Temperature%20influences%20most%20plant%20processes,%2C%20transpiration%2C%20and%20respiration%20increase
 
-[Reference 12]( https://kookye.com/2018/11/16/arduino-lesson-dht11-sensor/ )
+Reference 8
+
+1pcs Módulo Sensor Fotosensible de detección de Luz Fotorresistencia para Arduino. (n.d). Amazon. Retrieved October 22, 2020, from https://www.amazon.es/M%C3%B3dulo-Fotosensible-detecci%C3%B3n-Fotorresistencia-Arduino/dp/B00VUQ6CU0
+
+Reference 9
+
+Arduino lesson - Photoresistor. (n.d.). Kookye. Retrieved October 22, 2020, from https://kookye.com/2018/11/16/arduino-lesson-sound-detection-sensor-2/
+
+Reference 10
+
+Using light sensor module with Raspberry Pi. (n.d.). UUGear.Retrieved October 22, 2020, from http://www.uugear.com/portfolio/using-light-sensor-module-with-raspberry-pi/
+
+Reference 11
+
+DHT11 Temperature and Humidity Sensor and the Raspberry Pi. (2017, September 21). Raspbberry Spy. Retrieved October 22,2020, from https://www.raspberrypi-spy.co.uk/2017/09/dht11-temperature-and-humidity-sensor-raspberry-pi/
+
+Reference 12
+
+Arduino lesson - DHT11 Sensor. (n.d.). Kookye. Retrieved October 22, 2020, from https://kookye.com/2018/11/16/arduino-lesson-dht11-sensor/
 
 [Reference 13]( https://www.switchdoc.com/2020/06/tutorial-capacitive-moisture-sensor-grove/ )
 
@@ -421,13 +467,7 @@ Finally, with a little more time, one could add an automatic size detection algo
 
 [Reference 21](https://www.scientificamerican.com/article/science-with-a-smartphone-measure-light-with-lux/)
 
-[Reference 22](https://www.polygongroup.com/en-US/blog/how-humidity-affects-the-growth-of-plants/#:~:text=When%20conditions%20are%20too%20humid,and%20thrive%20in%20moist%20soil)
-
-[Reference 23](https://www.britannica.com/science/luminous-intensity)
-
-[Reference 24](https://aggie-horticulture.tamu.edu/ornamental/a-reference-guide-to-plant-care-handling-and-merchandising/light-temperature-and-humidity/)
-
-## Appendix: Calibration Procedures
+## Annex: Calibration Procedures
 ***Soil Moisture Calibration Method 1 (Source: Reference 14)***
 
 1-	Make several measurements when the sensor is dry (in the air, not inserted in the soil). Average the values of voltage. This value will correspond to 0% RH.
@@ -462,7 +502,7 @@ The resulting equation when we performed this method was the following:
 
 Calibrating the light sensor involved comparing voltage readings from the sensor with light intensity measurements taken from a Lux meter. To obtain a Lux meter, we downloaded a smartphone app called “LUX Light Meter FREE”, which detects light intensity via the phone’s camera. We then placed the light sensor and phone side-by-side in a cardboard box, folding the sides of the box so that light was only able to enter the box through ¼ of the top surface. The purpose of this setup was to ensure that we only captured the light directly hitting the surface of the sensor. This is in accordance with the recommendation of Reference[X], which suggests that the light sensor and light source should be perpendicular to each other. We recognize, however, that our process was not entirely accurate since the top surface was large enough to allow light to enter diagonally.
 
-Once our setup was complete, we took 14 different measurements of voltage of Lux. The box was placed in different locations and another phone was used to directly shine bright lights on the sensors. These points were then plotted in Figure A below: 
+Once our setup was complete, we took 15 different measurements of voltage of Lux. The box was placed in different locations and another phone was used to directly shine bright lights on the sensors. These points were then plotted in Figure A below: 
 
 <p align="center">
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/CalibA.PNG">
