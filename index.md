@@ -279,11 +279,11 @@ Our final code called "combined_sensors.py" can be found in the Github repositor
 </p>
 
 ## Experiments and Results
-After running our code to collect data for XX days, we got the following results:
+After running our code for 5 days (2 days uninterrupted followed by 3 days uninterrupted), we obtained a .csv output file. The file has a record for each timestamp. In our cases, we collected raw measurements each minute, so there exists a row for each minute. The columns are: timestamp, temperature (deg C), humidity (%), soil moisture (%), light intensity (lux), and average green intensity. The data is written to the file after the data processing steps described above, so the light and soil moisture levels are already converted from their raw voltage values. Zero values of temperature and humidity are also converted to NaN so that users can decide themselves how to handle the null values. Since an image was only captured at the end of each 24 hour period, there is a non-null value for this column only every 24\*60 rows. The simple nature of this file format makes it easily appendable. Thus, several people can run disparate experiments of the the same form and then join their results together. We envision the final output as a complete database populated by the results of multiple experiments, so that users may analyze the data across the desirable dimensions to extract the optimal environmental conditions that lead to growth of their plant.
 
 **CSV Output file:** The .csv file contained all the data points, as expected, with the structure shown in Figure 12.
 
-**Screencaps of .csv data**
+**Screenshots of .csv data**
 
 <p align="center">
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%205.jpg">
@@ -294,7 +294,7 @@ After running our code to collect data for XX days, we got the following results
 
 **Twitter:** Our program successfully tweeted an average summary of the environmental parameters of the past 24 hours. A representative tweet from the username [@smart_basil](https://twitter.com/basil_tech) can be seen in Figure 13.
 
-**Screencaps of Twitter**
+**Screenshots of Twitter**
 
 <p align="center">
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Twitter_screenshot.png">
@@ -307,7 +307,7 @@ Each photo has the timestamp attached, and the caption includes average humidity
  
 **Open Chirp:** Our program successfully connected live to the OpenChirp IoT platform. A sample of the resulting graphs can be seen in Figure 14.
 
-**Screencaps of OpenChirp**
+**Screenshots of OpenChirp**
 
 <p align="center">
   <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/OpenChirp_screenshot.png">
