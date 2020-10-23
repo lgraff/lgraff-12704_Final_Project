@@ -11,7 +11,7 @@ Growing plants indoors requires attention to a variety of environmental factors,
 Our setup is described in Figure 1.
 
 <p align="center">
-  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%201.png">
+  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/New_Sketch.png">
 </p>
 <p align="center">
   Figure 1. Sensing and Data Broadcasting System sketch. Sources for figures: References 1,2,3
@@ -337,53 +337,103 @@ Some features that would be interesting to add would be actuators like a water p
 Finally, with a little more time, one could add an automatic size detection algorithm to the image processing part, to monitor plant growth in real time.
 
 ## References
-[Reference 1]( https://www.vectorstock.com/24932206)
 
-[Reference 2]( https://www.vectorstock.com/13231070)
+Reference 1
 
-[Reference 3]( https://www.shutterstock.com/search/camera+side+view)
+Clip art flower pot. (n.d.). Clipart Library. Retrieved October 22, 2020, from http://clipart-library.com/clipart/1660553.htm
 
-[Reference 4]( http://ieassa.org/en/soil-moisture-importance/)
+Reference 2
 
-[Reference 5]( https://www.nfsa.gov.au/preservation/preservation-glossary/relative-humidity-rh)
+Photography png. (n.d.). Clipart Library. Retrieved October 22, 2020, from http://clipart-library.com/clipart/k8ixbpbcp.htm
 
-[Reference 6](https://gardenculturemagazine.com/grow-room-humidity-important/#:~:text=If%20your%20grow%20room%20humidity,water%20out%20of%20the%20plant.)
+Reference 3
 
-[Reference 7]( https://www.scienceprojects.org/how-does-the-temperature-affect-the-plant-growth/#:~:text=Effect%20of%20temperature%20on%20plants&text=Temperature%20influences%20most%20plant%20processes,%2C%20transpiration%2C%20and%20respiration%20increase )
+Tripod clipart. (n.d.). Clipart Library. Retrieved October 22, 2020, from http://clipart-library.com/clipart/433056.htm
 
-[Reference 8](https://www.amazon.es/M%C3%B3dulo-Fotosensible-detecci%C3%B3n-Fotorresistencia-Arduino/dp/B00VUQ6CU0)
+Reference 4
 
-[Reference 9]( https://kookye.com/2018/11/16/arduino-lesson-sound-detection-sensor-2/)
+Soil moisture importance. (2013, December 24). IEASSA. Retrieved October 22, 2020, from http://ieassa.org/en/soil-moisture-importance/
 
-[Reference 10]( http://www.uugear.com/portfolio/using-light-sensor-module-with-raspberry-pi/)
+Reference 5
 
-[Reference 11]( https://www.raspberrypi-spy.co.uk/2017/09/dht11-temperature-and-humidity-sensor-raspberry-pi/ )
+Relative humidity (RH). (n.d.). NFSA. Retrieved October 22, 2020, from https://www.nfsa.gov.au/preservation/preservation-glossary/relative-humidity-rh
 
-[Reference 12]( https://kookye.com/2018/11/16/arduino-lesson-dht11-sensor/ )
+Reference 6
 
-[Reference 13]( https://www.switchdoc.com/2020/06/tutorial-capacitive-moisture-sensor-grove/ )
+Brookes, S. (2016, December 26). Why is Grow Room Humidity Important? Garden Culture Magazine. Retrieved October 22, 2020, from https://gardenculturemagazine.com/grow-room-humidity-important/#:~:text=If%20your%20grow%20room%20humidity,water%20out%20of%20the%20plant [Here](https://gardenculturemagazine.com/grow-room-humidity-important/#:~:text=If%20your%20grow%20room%20humidity,water%20out%20of%20the%20plant.)
 
-[Reference 14]( https://www.sigmaelectronica.net/wp-content/uploads/2018/04/sen0193-humedad-de-suelos.pdf )
+Reference 7
 
-[Reference 15](https://picamera.readthedocs.io/en/release-1.12/recipes1.html)
+How does the temperature affect the plant growth? (n.d.). Science Projects. Retrieved October 22, 2020, from https://www.scienceprojects.org/how-does-the-temperature-affect-the-plant-growth/#:~:text=Effect%20of%20temperature%20on%20plants&text=Temperature%20influences%20most%20plant%20processes,%2C%20transpiration%2C%20and%20respiration%20increase
 
-[Reference 16](https://components101.com/sites/default/files/component_datasheet/DHT11-Temperature-Sensor.pdf )
+Reference 8
 
-[Reference 17]( https://www.sunrom.com/p/light-sensing-module-ldr )
+1pcs Módulo Sensor Fotosensible de detección de Luz Fotorresistencia para Arduino. (n.d). Amazon. Retrieved October 22, 2020, from https://www.amazon.es/M%C3%B3dulo-Fotosensible-detecci%C3%B3n-Fotorresistencia-Arduino/dp/B00VUQ6CU0
 
-[Reference 18](https://projects.raspberrypi.org/en/projects/getting-started-with-the-twitter-api)
+Reference 9
 
-[Reference 19](https://inferlab.github.io/12740/tutorials/openchirp.html )
+Arduino lesson - Photoresistor. (n.d.). Kookye. Retrieved October 22, 2020, from https://kookye.com/2018/11/16/arduino-lesson-sound-detection-sensor-2/
 
-[Reference 20](https://www.desertcart.us/products/160041787-raspberry-pi-camera-video-module-5-megapixel-1080-p-mini-webcam-sensor-ov-5647-for-raspberry-pi-model-a-b-b-r-pi-2-b-pi-3-b-3-b-and-pi-4-b)
+Reference 10
 
-[Reference 21](https://www.scientificamerican.com/article/science-with-a-smartphone-measure-light-with-lux/)
+Using light sensor module with Raspberry Pi. (n.d.). UUGear.Retrieved October 22, 2020, from http://www.uugear.com/portfolio/using-light-sensor-module-with-raspberry-pi/
 
-[Reference 22](https://www.polygongroup.com/en-US/blog/how-humidity-affects-the-growth-of-plants/#:~:text=When%20conditions%20are%20too%20humid,and%20thrive%20in%20moist%20soil)
+Reference 11
 
-[Reference 23](https://www.britannica.com/science/luminous-intensity)
+DHT11 Temperature and Humidity Sensor and the Raspberry Pi. (2017, September 21). Raspbberry Spy. Retrieved October 22, 2020, from https://www.raspberrypi-spy.co.uk/2017/09/dht11-temperature-and-humidity-sensor-raspberry-pi/
 
-[Reference 24](https://aggie-horticulture.tamu.edu/ornamental/a-reference-guide-to-plant-care-handling-and-merchandising/light-temperature-and-humidity/)
+Reference 12
+
+Arduino lesson - DHT11 Sensor. (n.d.). Kookye. Retrieved October 22, 2020, from https://kookye.com/2018/11/16/arduino-lesson-dht11-sensor/
+
+Reference 13
+
+Tutorial – Using Capacitive Soil Moisture Sensors on the Raspberry Pi. (2020, June 17). SwitchDoc Labs. Retrieved October 22, 2020, from https://www.switchdoc.com/2020/06/tutorial-capacitive-moisture-sensor-grove/
+
+Reference 14
+
+Capacitive Soil Moisture Sensor SKU:SEN0193. (2017, May 25). SigmaElectronica. Retrieved October 22, 2020, from https://www.sigmaelectronica.net/wp-content/uploads/2018/04/sen0193-humedad-de-suelos.pdf
+
+Reference 15
+
+Getting started with the Camera Module. (n.d.). Raspberry Pi. Retrieved October 22, 2020, from https://projects.raspberrypi.org/en/projects/getting-started-with-picamera
+
+Reference 16
+
+DHT11 Temperature Sensor. (n.d.). Components 101. Retrieved October 22, 2020, from https://components101.com/sites/default/files/component_datasheet/DHT11-Temperature-Sensor.pd
+
+Reference 17
+
+Light Sensing Module. (n.d.). Sunrom. Retrieved October 22, 2020, from https://www.sunrom.com/p/light-sensing-module-ldr
+
+Reference 18
+
+Getting started with the Twitter API. (n.d.). Raspberry Pi. Retrieved October 22, 2020, from https://projects.raspberrypi.org/en/projects/getting-started-with-the-twitter-api
+
+Reference 19
+
+Berges, M. & Chen, B. 4. Creating Your Owwn IoT Device. (2019). 12-740 Data Acquisition (Inferlab). Retrieved October 22, 2020, from https://inferlab.github.io/12740/tutorials/openchirp.html
+
+Reference 20
+
+Raspberry Pi Camera Video Module 5 Megap. (n.d.). Desert Cart. Retrieved October 22, 2020, from https://www.desertcart.us/products/160041787-raspberry-pi-camera-video-module-5-megapixel-1080-p-mini-webcam-sensor-ov-5647-for-raspberry-pi-model-a-b-b-r-pi-2-b-pi-3-b-3-b-and-pi-4-b
+
+Reference 21
+
+Finio, B. Science with a Smartphone: Measure light with lux. (2019, October 3). Scientific American. Retrieved October 22, 2020, from https://www.scientificamerican.com/article/science-with-a-smartphone-measure-light-with-lux/
+
+Reference 22
+
+How humidity affects the growth of plants. (n.d). Polygon Group. Retrieved October 22, 2020, from https://www.polygongroup.com/en-US/blog/how-humidity-affects-the-growth-of-plants/#:~:text=When%20conditions%20are%20too%20humid,and%20thrive%20in%20moist%20soil
+
+Reference 23
+
+The Editors of Encyclopedia Britanica. Luminous intensity. (n.d.). Britannica. Retrieved October 22, 2020, from https://www.britannica.com/science/luminous-intensity
+
+Reference 24
+
+Light Temperature and Humidity. (n.d.). Texas A&M AgriLife Extension. Retrieved October 22, 2020, from https://aggie-horticulture.tamu.edu/ornamental/a-reference-guide-to-plant-care-handling-and-merchandising/light-temperature-and-humidity/
+
 
 ## Appendix: Calibration Procedures
 ***Soil Moisture Calibration Method 1 (Source: Reference 14)***
