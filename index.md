@@ -413,11 +413,17 @@ Finally, with a little more time, one could add an automatic size detection algo
 
 [Reference 3]( https://www.shutterstock.com/search/camera+side+view)
 
-[Reference 4]( http://ieassa.org/en/soil-moisture-importance/)
+Reference 4
 
-[Reference 5]( https://www.nfsa.gov.au/preservation/preservation-glossary/relative-humidity-rh)
+Soil moisture importance. (2013, December 24). IEASSA. Retrieved October 22, 2020, from http://ieassa.org/en/soil-moisture-importance/ [Here]( http://ieassa.org/en/soil-moisture-importance/)
 
-[Reference 6](https://gardenculturemagazine.com/grow-room-humidity-important/#:~:text=If%20your%20grow%20room%20humidity,water%20out%20of%20the%20plant.)
+Reference 5
+
+Relative humidity (RH). (n.d.). NFSA. Retrieved October 22, 2020, from https://www.nfsa.gov.au/preservation/preservation-glossary/relative-humidity-rh [Here]( https://www.nfsa.gov.au/preservation/preservation-glossary/relative-humidity-rh)
+
+Reference 6
+
+Brookes, S. (2016, December 26). Why is Grow Room Humidity Important? Garden Culture Magazine. Retrieved October 22, 2020, from https://gardenculturemagazine.com/grow-room-humidity-important/#:~:text=If%20your%20grow%20room%20humidity,water%20out%20of%20the%20plant [Here](https://gardenculturemagazine.com/grow-room-humidity-important/#:~:text=If%20your%20grow%20room%20humidity,water%20out%20of%20the%20plant.)
 
 [Reference 7]( https://www.scienceprojects.org/how-does-the-temperature-affect-the-plant-growth/#:~:text=Effect%20of%20temperature%20on%20plants&text=Temperature%20influences%20most%20plant%20processes,%2C%20transpiration%2C%20and%20respiration%20increase )
 
