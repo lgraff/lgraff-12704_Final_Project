@@ -469,16 +469,16 @@ The resulting equation when we performed this method was the following:
 
 Calibrating the light sensor involved comparing voltage readings from the sensor with light intensity measurements taken from a Lux meter. To obtain a Lux meter, we downloaded a smartphone app called “LUX Light Meter FREE”, which detects light intensity via the phone’s camera. We then placed the light sensor and phone side-by-side in a cardboard box, folding the sides of the box so that light was only able to enter the box through ¼ of the top surface. The purpose of this setup was to ensure that we only captured the light directly hitting the surface of the sensor. This is in accordance with the recommendation of Reference 21, which suggests that the light sensor and light source should be perpendicular to each other. We recognize, however, that our process was not entirely accurate since the top surface was large enough to allow light to enter diagonally.
 
-Once our setup was complete, we took 14 different measurements of voltage of Lux. The box was placed in different locations and another phone was used to directly shine bright lights on the sensors. These points were then plotted in Figure A below: 
+Once our setup was complete, we took 14 different measurements of voltage of Lux. The box was placed in different locations and another phone was used to directly shine bright lights on the sensors. These points were then plotted in the figure below: 
 
 <p align="center">
-  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/CalibA.PNG">
+  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/CalibA.png">
 </p>
 
 We observe a nonlinear relationship between voltage and Lux. We then transform the axes to a log-log scale, as shown in Figure B.
 
 <p align="center">
-  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/CalibB.PNG">
+  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/CalibB.png">
 </p>
 
 The transformed scale exposes a relatively linear relationship between log(voltage) and log(lux). We perform a least squares linear fit and find the following relationship: 
