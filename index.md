@@ -2,11 +2,13 @@
 # Hi-Tech Basil
 
 [Video link](https://vimeo.com/471399257)
+[Twitter link](https://twitter.com/basil_tech)
+[OpenChirp link](https://openchirp.io/home/device/5f8b0735004d6e55c61dd4bb#visualization
 
 # Introduction
 In this project, we describe how to set up a sensing and data broadcasting system for a homegrown basil plant. The data is captured by a Raspberry Pi and various sensors, and made available through Twitter, the IoT platform OpenChirp, and a .csv file. If enough people create this simple at-home system, we could crowdsource a useful database that offers insight into the optimal ranges for environmental factors that promote plant growth.
 ## Motivation
-Growing plants indoors requires attention to a variety of environmental factors, including temperature, humidity, light, and soil moisture levels. Regulation of these parameters can be difficult, especially when there is sparse data concerning ideal growing conditions for individual plants. Specifically for the basil herb, a quick online search will reveal several different choices that an individual may make when tuning the ambient environmental factors. Notably, however, most sources are primarily anecdotal; homegrowers have yet to document the environmental conditions and associated growth patterns of their plants over time. To address these needs, we propose Hi-Tech Basil: a tweeting indoor basil plant with an associated database and IoT capabilities. Analyzing the hourly records of this database, in addition to visualizing photos of the plant included in live daily tweets, may provide home growers with insight that optimizes the growth of their indoor plants.
+Growing plants indoors requires attention to a variety of environmental factors, including temperature, humidity, light, and soil moisture levels. Regulation of these parameters can be difficult, especially when there is sparse data concerning ideal growing conditions for individual plants. Specifically for the basil herb, a quick online search will reveal several different choices that an individual may make when tuning the ambient environmental factors. Notably, however, most sources are primarily anecdotal; homegrowers have yet to document the environmental conditions and associated growth patterns of their plants over time. To address these needs, we propose Hi-Tech Basil: a tweeting indoor basil plant with an associated database and IoT capabilities. Analyzing the hourly records of this database, in addition to visualizing photos of the plant included in live daily tweets [(@smart_basil)](https://twitter.com/basil_tech), may provide home growers with insight that optimizes the growth of their indoor plants.
 ## Project Sketch
 Our setup is described in Figure 1.
 
@@ -245,7 +247,7 @@ The sample rate for all sensors (except the camera) was one sample per hour, or 
 
 We chose to store the data locally by writing it to a .csv file. This file includes a row for every timestamp containing any measurement, and a column for every type of raw measurement taken. As such, there are 6 columns: timestamp, temperature, humidity, soil moisture, light, and average green intensity. It must be noted that the green intensity column contains null values unless the timestamp represents the end of a full 24 hour period. The .csv format will facilitate usage of the data by others if we decided to upload file elsewhere. Furthermore, if others decided to embark on the same Hi Tech Plant project with their own indoor plant, this file format would enable simple data merges. This would subsequently provide resources for the plant growing community to start quantitatively analyzing best practices concerning environmental conditions. The pictures taken by the camera at the end of each period were also stored in a local folder. 
 
-To share the data, we decided to tweet a daily summary of the data hosted by the Twitter handle @smart_basil. This includes the average temperature, humidity, soil moisture, and light value of the past 24 hours, as well as the average green pixel intensity of the photo taken at the end of the period. Users may scroll through the Twitter feed for a visual understanding of how the basil plant looks every 24 hours, associated with a summary of the average environmental parameters the plant experienced. Instructions on how to tweet using a Raspberry Pi can be found at Reference 18.
+To share the data, we decided to tweet a daily summary of the data hosted by the Twitter handle [@smart_basil](https://twitter.com/basil_tech). This includes the average temperature, humidity, soil moisture, and light value of the past 24 hours, as well as the average green pixel intensity of the photo taken at the end of the period. Users may scroll through the Twitter feed for a visual understanding of how the basil plant looks every 24 hours, associated with a summary of the average environmental parameters the plant experienced. Instructions on how to tweet using a Raspberry Pi can be found at Reference 18.
 
 We also used the OpenChirp IoT platform to share our data in real time, making use of its graphing capabilities. Users can check this platform to see time series graphs of the raw measurements in real time. This can be of use for plant growers who need quick updates on the status of the environmental conditions so that they can make required changes. For example, one might decide to water their plant while simultaneously monitoring the soil moisture levels on OpenChirp in order to ensure that they do not exceed the plant's water tolerance. Instructions on how to use this platform with Raspberry Pi can be found at Reference 19. 
 
@@ -290,7 +292,7 @@ After running our code to collect data for XX days, we got the following results
   Figure 12. Sample output of .csv file
 </p>
 
-**Twitter:** Our program successfully tweeted an average summary of the environmental parameters of the past 24 hours. A representative tweet from the username @smart_basil can be seen in Figure 13.
+**Twitter:** Our program successfully tweeted an average summary of the environmental parameters of the past 24 hours. A representative tweet from the username [@smart_basil](https://twitter.com/basil_tech) can be seen in Figure 13.
 
 **Screencaps of Twitter**
 
