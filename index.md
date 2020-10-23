@@ -1,9 +1,9 @@
 # 12-740 Final Project
 # Hi-Tech Basil
 
-[Video link](https://vimeo.com/471399257)
-[Twitter link](https://twitter.com/basil_tech)
-[OpenChirp link](https://openchirp.io/home/device/5f8b0735004d6e55c61dd4bb#visualization
+-[Video link](https://vimeo.com/471399257)
+-[Twitter link](https://twitter.com/basil_tech)
+-[OpenChirp link](https://openchirp.io/home/device/5f8b0735004d6e55c61dd4bb#visualization)
 
 # Introduction
 In this project, we describe how to set up a sensing and data broadcasting system for a homegrown basil plant. The data is captured by a Raspberry Pi and various sensors, and made available through Twitter, the IoT platform OpenChirp, and a .csv file. If enough people create this simple at-home system, we could crowdsource a useful database that offers insight into the optimal ranges for environmental factors that promote plant growth.
