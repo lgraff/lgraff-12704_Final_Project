@@ -20,7 +20,7 @@ Our setup is described in Figure 1.
 </p>
 
 ## Main Goal
-* Create a sensing and data broadcasting system for homegrown plants so that users may extract information pertaining to the conditions necessary for plant growth 
+* Create a sensing and data broadcasting system for homegrown plants so that users may extract information pertaining to the conditions necessary for plant growth  
 ## Specific Goals
 *	Create a sensing system that measures ambient humidity and temperature, ambient light intensity, soil moisture, and takes a still photo of the plant at the end of each growth period.
 *	Create a growth status index that can be automatically extracted from the picture taken.
