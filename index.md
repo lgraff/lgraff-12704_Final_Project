@@ -31,13 +31,13 @@ Our setup is described in Figure 1.
 ## Phenomena of Interest
 The physical phenomena of interest include soil moisture, temperature, humidity, and light. Since all the phenomena of our experiments vary slowly in time, they can all be considered static in nature.
 
-**Soil moisture:** Soil moisture percentage refers to the amount of water available in the soil. It can be measured as a ratio of volume of water per unit volume of soil, or as a ratio of water mass per unit mass of soil. We opt for the second measure because it is easier to measure, and so the calibration of the soil moisture sensor is easy to conduct at home. According to Reference 4, the water in soil is important for plant growth because it acts as a carrier of nutrients, helps in the photosynthesis and metabolic process of plants, and moderates soil temperature.
+**Soil moisture:** Soil moisture percentage refers to the amount of water available in the soil. It can be measured as the ratio of volume of water per unit volume of soil, or as the ratio of water mass per unit mass of soil. We opt for the second measure because it is easier to measure, and so the calibration of the soil moisture sensor is easy to conduct at home. According to Reference 4, the water in soil is important for plant growth because it acts as a carrier of nutrients, helps in photosynthesis and other metabolic processes of plants, and moderates soil temperature.
 
-**Ambient humidity:** Ambient humidity is roughly defined as the amount of water in the air, relative to the maximum amount of water the air can hold at a given temperature. The strict definition is “the ratio of the actual water vapour pressure to the saturation water vapour pressure at the prevailing temperature" (Reference 5). The importance of this factor for plant growth relates to the photosynthesis and transpiration processes. In a dry environment, the plant tries to retain its water by closing its stomata, but in doing so, the plant simultaneously stifles its ability to intake CO2. In a highly humid environment, the plant cannot evaporate water at a fast enough rate. Consequently, an appropriate humidity level allows the plant to both photosynthesize and transpire so that it may grow (Reference 22).
+**Ambient humidity:** Ambient humidity is roughly defined as the amount of water in the air, relative to the maximum amount of water that the air can hold at a given temperature. The strict definition is “the ratio of the actual water vapour pressure to the saturation water vapour pressure at the prevailing temperature" (Reference 5). The importance of this factor for plant growth relates to the photosynthesis and transpiration processes. In a dry environment, the plant tries to retain its water by closing its stomata, but in doing so, the plant simultaneously stifles its ability to intake CO2. In a highly humid environment, the plant cannot evaporate water at a fast enough rate. Consequently, an appropriate humidity level allows the plant to both photosynthesize and transpire so that it may grow (Reference 22).
 
 **Ambient temperature:** The ambient temperature simply describes the temperature of area directly surrounding the plant. This factor affects many metabolic processes that plants undergo while growing. While photosynthesis, transpiration, and respiration typically accelerate at higher temperatures, the temperatures required for the germination and flowering processes depend on the individual plant. For this reason, we see the existence of seasonal crops, or those that can only survive during certain times of the year (Reference 7).
 
-**Ambient light intensity:** Light intensity, measured in units of lux, is formally defined as the amount of "light that is emitted in unit time per unit solid angle" (Reference 23). Measuring light intensity near the plant tells us the amount of sunlight that the plant receives. Sunlight is vital for plants, as it enables photosynthesis. The amount of sunlight required for this process, however, varies by plant (Reference 24). While a basil grower would be more interested in knowing the hours of sunlight exposure for their plant, the average light intensity will suffice for this purpose of this project. 
+**Ambient light intensity:** Light intensity, measured in units of lux, is formally defined as the amount of "light that is emitted in unit time per unit solid angle" (Reference 23). Measuring light intensity near the plant tells us the amount of sunlight that the plant receives. Sunlight is vital for plants, as it enables photosynthesis. The amount of sunlight required for this process, however, varies by plant (Reference 24). While a basil grower would be more interested in knowing the number of hours of sunlight exposure for their plant, the average light intensity will suffice for this purpose of this project. 
 
 **Intensity of green color:** The average green pixel intensity from the image of each plant is used as a crude proxy of plant growth. By capturing the quantity of green in an image, we can better understand the vitality and general state of the basil we are using as a test subject. The inherent assumption is that a healthier basil plant will be greener. While this metric is not perfect, we think it is a suitable proxy, particularly for basil. From our prior qualitative experiences with indoor basil harvesting, a more vibrant has bushier leaves (hence more green), while the leaves of a decaying basil plant will wilt (hence less green). We recognize that plant height could also be representative of plant growth, but we believe that green pixel intensity better captures the full plant in all dimenions. 
 
@@ -265,7 +265,7 @@ After sampling the signals, we conducted basic data processing to obtain the nec
 
 ## Final Setup
 
-Our final code called "combined_sensors.py" can be found in the Github repository.
+Our final code called "combined_sensors.py" can be found in the Github repository [here](https://github.com/lgraff/lgraff-12740_Final_Project/blob/main/combined_sensors.py).
 
 **Physical Setup:** the setup sketch in Figure 1 was materialized as can be seen in Figure 11.
 
@@ -279,18 +279,20 @@ Our final code called "combined_sensors.py" can be found in the Github repositor
 </p>
 
 ## Experiments and Results
-After running our code for 5 days (2 days uninterrupted followed by 3 days uninterrupted), we obtained a .csv output file. The file has a record for each timestamp. In our cases, we collected raw measurements each minute, so there exists a row for each minute. The columns are: timestamp, temperature (deg C), humidity (%), soil moisture (%), light intensity (lux), and average green intensity. The data is written to the file after the data processing steps described above, so the light and soil moisture levels are already converted from their raw voltage values. Zero values of temperature and humidity are also converted to NaN so that users can decide themselves how to handle the null values. Since an image was only captured at the end of each 24 hour period, there is a non-null value for this column only every 24\*60 rows. The simple nature of this file format makes it easily appendable. Thus, several people can run disparate experiments of the the same form and then join their results together. We envision the final output as a complete database populated by the results of multiple experiments, so that users may analyze the data across the desirable dimensions to extract the optimal environmental conditions that lead to growth of their plant.
+We ran our experiments for 4 days (2 days uninterrupted followed by 3 days uninterrupted). After the first two days, we realized that the camera was taking photos in lighting conditions that were too low, so we stopped the program and changed the camera's brightness and contrast settings. After the next three days, the Rasberry Pi unexpectedly disconnected from the internet, so the program returned an error during the tweeting function at the end of the third 24 hour period. The end result is: one initial "test" tweet, two tweets in low light, two tweets representing the model output of the system, one .csv file representing three complete days of system performance, and OpenChirp visualizations representing multiple days of raw measurements.
 
-**CSV Output file:** The .csv file contained all the data points, as expected, with the structure shown in Figure 12.
+**CSV Output file:** The .csv file contained 72 hours of minute-by-minute data points (4320 rows), as expected, with the structure shown in Figure 12.
 
 **Screenshots of .csv data**
 
 <p align="center">
-  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/Figure%205.jpg">
+  <img src="https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/csv.png">
 </p>
 <p align="center">
   Figure 12. Sample output of .csv file
 </p>
+
+The [.csv output file](https://github.com/lgraff/lgraff-12740_Final_Project/blob/main/data_all.csv) has a record for each timestamp. In our cases, we collected raw measurements each minute, so there exists a row for each minute. The columns are: timestamp, temperature (deg C), humidity (%), soil moisture (%), light intensity (lux), and average green intensity. The data is written to the file after the data processing steps described above, so the light and soil moisture levels are already converted from their raw voltage values. Zero values of temperature and humidity are also converted to NaN so that users can decide themselves how to handle the null values. Since an image was only captured at the end of each 24 hour period, there is a non-null value for this column only every 24\*60 rows. The simple nature of this file format makes it easily appendable. Thus, several people can run disparate experiments of the the same form and then join their results together. We envision the final output as a complete database populated by the results of multiple experiments, so that users may analyze the data across the desirable dimensions to extract the optimal environmental conditions that lead to growth of their plant.
 
 **Twitter:** Our program successfully tweeted an average summary of the environmental parameters of the past 24 hours. A representative tweet from the username [@smart_basil](https://twitter.com/basil_tech) can be seen in Figure 13.
 
@@ -437,6 +439,8 @@ Light Temperature and Humidity. (n.d.). Texas A&M AgriLife Extension. Retrieved 
 ## Appendix: Calibration Procedures
 ***Soil Moisture Calibration Method 1 (Source: Reference 14)***
 
+[soil moisture calibration code](https://github.com/lgraff/lgraff-12740_Final_Project/blob/main/soil_moisture_test.py)
+
 1-	Make several measurements when the sensor is dry (in the air, not inserted in the soil). Average the values of voltage. This value will correspond to 0% RH.
 
 2-	Dip the sensor in a glass of water, to the depth that you will insert it in the soil. Make several measurements, and average the values of voltage. This value will correspond 1to 100% RH.
@@ -466,6 +470,8 @@ The resulting equation when we performed this method was the following:
 7-	The transfer function can be either a polynomial fit to the points, or a direct linear interpolation between the points.
 
 ***Light Sensor Calibration Procedure***
+
+[light calibration code](https://github.com/lgraff/lgraff-12740_Final_Project/blob/main/light_calibration.py)
 
 Calibrating the light sensor involved comparing voltage readings from the sensor with light intensity measurements taken from a Lux meter. To obtain a Lux meter, we downloaded a smartphone app called “LUX Light Meter FREE”, which detects light intensity via the phone’s camera. We then placed the light sensor and phone side-by-side in a cardboard box, folding the sides of the box so that light was only able to enter the box through ¼ of the top surface. The purpose of this setup was to ensure that we only captured the light directly hitting the surface of the sensor. This is in accordance with the recommendation of Reference 21, which suggests that the light sensor and light source should be perpendicular to each other. We recognize, however, that our process was not entirely accurate since the top surface was large enough to allow light to enter diagonally.
 
@@ -516,41 +522,4 @@ Using this relationship, we can convert between the sensor’s voltage value and
 - Learn more about basic image processing to see what data we can extract from our images. 
 - Create a database to store the average temperature, humidity, light, and soil moisture values of the past 6 or 8 hours, along with a picture of the plant at that time step and possibly a measure of growth in the past 6 or 8 hours. This will require us to sense temp/humidity/light/moisture at relatively short intervals, take the average of the time interval, and then record the values. Each row of the database will represent a different time interval.
 - Determine how to connect everything to an IoT app and decide what to display to users. We imagine an app that displays a row of the database corresponding to each time interval i.e. the user can see avg temp/humidity/light/moisture, along with a before vs. after photo of the plant.
-- **Time permitting: time series graphics that may inform users how temperature/humidity/light/moisture affect basil plant performance 
 
-
-## Github pages syntax (for reference)
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/lgraff/lgraff-12704_Final_Project/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
-
-You can use the [editor on GitHub](https://github.com/lgraff/lgraff-12704_Final_Project/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
