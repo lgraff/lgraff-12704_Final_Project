@@ -1,6 +1,7 @@
 # 12-740 Final Project
 # Hi-Tech Basil
 
+- [First Progress Report](https://github.com/lgraff/lgraff-12740_Final_Project/blob/gh-pages/first_pr.md)
 - [Video link](https://vimeo.com/471399257)
 - [Twitter link](https://twitter.com/basil_tech)
 - [OpenChirp link](https://openchirp.io/home/device/5f8b0735004d6e55c61dd4bb#visualization)
